@@ -18,13 +18,13 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'public/bundle.js'
+		file: 'docs/bundle.js'
 	},
 	plugins: [
 		svelte({
 			dev: !production,
 			css: css => {
-				css.write('public/bundle.css');
+				css.write('docs/bundle.css');
 			},
 			preprocess: {
 				style: ({
@@ -54,7 +54,7 @@ export default {
 		}),
 		commonjs(),
 
-		!production && livereload('public'),
+		!production && livereload('docs'),
 		production && terser()
 	],
 	watch: {
