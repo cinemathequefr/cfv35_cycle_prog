@@ -4,12 +4,15 @@ const _ = require("lodash");
 
 /**
  * artTitre
- * @description
+ * @description Met en forme un titre (de film, etc.) à partir de son article défini et sa partie principale.
  * @param {string|null} art 
- * @param {string} titre 
+ * @param {string} titre
+ * @param {boolean} reject true: utiliser la forme rejetée
  */
-function artTitre(art, titre) {
-  return !art ? titre : art === "L'" ? art + titre : art + " " + titre;
+function artTitre(art, titre, reject = false) {
+  return reject ?
+    !art ? titre : `${titre} (${art})` :
+    !art ? titre : art === "L'" ? `${art}${titre}` : `${art} ${titre}`;
 }
 
 
@@ -29,7 +32,8 @@ function beforeAfterStr(before, after, str) {
   let _after = after;
   if (typeof before !== "function") before = () => (_before || "");
   if (typeof after !== "function") after = () => (_after || "");
-  return before(str) + str + after(str);
+  return `${before(str)}${str}${after(str)}`;
+  // return before(str) + str + after(str);
 }
 
 
@@ -78,7 +82,8 @@ function joinLast(separator, lastSeparator, arr) {
     a = a || [];
     if (a.length < 2) return a.join("");
     var last = a.pop();
-    return a.join(separator) + lastSeparator + last;
+    return `${a.join(separator)}${lastSeparator}${last}`;
+    // return a.join(separator) + lastSeparator + last;
   }
   return j(arr);
 }
@@ -200,7 +205,8 @@ function precedeSuivi(avant, apres) {
     ", ",
     ", ",
     _(avant).map(function (d) {
-      return "_" + artTitre(d.art, d.titre) + "_" + beforeAfterStr(" " + de(d.realisateurs), "", d.realisateurs);
+      return `_${artTitre(d.art, d.titre)}_${beforeAfterStr(` ${de(d.realisateurs), "", d.realisateurs}`)}`;
+      //return "_" + artTitre(d.art, d.titre) + "_" + beforeAfterStr(" " + de(d.realisateurs), "", d.realisateurs);
       // return "_" + artTitre(d.art, d.titre) + "_" + beforeAfterStr(" (", ")", d.realisateurs);
     })
   );
@@ -208,7 +214,8 @@ function precedeSuivi(avant, apres) {
     ", ",
     ", ",
     _(apres).map(function (d) {
-      return "_" + artTitre(d.art, d.titre) + "_" + beforeAfterStr(" " + de(d.realisateurs), "", d.realisateurs);
+      return `_${artTitre(d.art, d.titre)}_${beforeAfterStr(` ${de(d.realisateurs), "", d.realisateurs}`)}`;
+      // return "_" + artTitre(d.art, d.titre) + "_" + beforeAfterStr(" " + de(d.realisateurs), "", d.realisateurs);
       // return "_" + artTitre(d.art, d.titre) + "_" + beforeAfterStr(" (", ")", d.realisateurs);
     })
   );

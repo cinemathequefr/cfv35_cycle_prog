@@ -18,13 +18,13 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'docs/bundle.js'
+		file: 'docs/js/bundle.js'
 	},
 	plugins: [
 		svelte({
 			dev: !production,
 			css: css => {
-				css.write('docs/bundle.css');
+				css.write('docs/css/bundle.css');
 			},
 			preprocess: {
 				style: ({
