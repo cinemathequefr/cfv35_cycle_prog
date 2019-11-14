@@ -27,43 +27,7 @@
 </script>
 
 <style type="text/postcss">
-  @media (min-width: 0px) {
-    p {
-      width: 100%;
-    }
-    .container {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    section > div {
-      lost-waffle: 1/1;
-    }
-    .evenement-image {
-      display: none;
-    }
-  }
 
-  @media (min-width: 768px) {
-    section > div {
-      lost-waffle: 1/3;
-    }
-    .evenement-image {
-      display: block;
-    }
-  }
-
-  @media (min-width: 1440px) {
-    .container {
-      width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    section > div {
-      lost-waffle: 1/4;
-    }
-  }
 </style>
 
 <div>
