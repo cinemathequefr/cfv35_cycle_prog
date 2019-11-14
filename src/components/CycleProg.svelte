@@ -1,23 +1,24 @@
 <script>
-  import { onMount } from "svelte";
-  import _ from "lodash";
+  // import { onMount } from "svelte";
+  // import _ from "lodash";
   import dayjs from "dayjs";
   dayjs.locale("fr");
   import "../lib/dayjs_custom_locale_fr.js";
   import format from "../lib/format";
   import { filmsImg } from "../store.js";
 
-  export let datasrc;
+  export let header = { titreCycle: "" };
+  export let data = [];
 
-  let header = { titreCycle: "" };
-  let data = [];
+  // let header = { titreCycle: "" };
+  // let data = [];
 
-  onMount(async () => {
-    const res = await fetch(datasrc);
-    const raw = await res.json();
-    header = raw.header;
-    data = raw.data;
-  });
+  // onMount(async () => {
+  //   const res = await fetch(datasrc);
+  //   const raw = await res.json();
+  //   header = raw.header;
+  //   data = raw.data;
+  // });
 </script>
 
 <style type="text/postcss">

@@ -3,7 +3,38 @@
   import CycleProg from "./CycleProg.svelte";
   import { filmsImg } from "../store.js";
 
+  let selected;
+  let cycleData = {};
+
   filmsImg.fetch();
+
+  const dataUrls = [
+    [
+      "Vittorio De Sica",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL449_RENDER_DEF%20Vittorio%20De%20Sica.json"
+    ],
+    [
+      "Jean-Luc Godard",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL444_RENDER_DEF%20Jean-Luc%20Godard.json"
+    ],
+    [
+      "John Cassavetes",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG60%20Juin-juillet%202019/PROG60_CYCL426_RENDER%20John%20Cassavetes.json"
+    ],
+    [
+      "Eric Rohmer",
+      "https://gist.githubusercontent.com/nltesown/5254b4a3530da9a4d5b06168b99b1525/raw/9b6af7e925ea1700a27030ba1138800c39ed985a/rohmer_RENDER.json"
+    ]
+  ];
+
+  onMount(async () => {
+    await fetchData({ target: { value: dataUrls[0][1] } });
+  });
+
+  async function fetchData(e) {
+    const res = await fetch(e.target.value);
+    cycleData = await res.json();
+  }
 </script>
 
 <style type="text/postcss">
@@ -77,7 +108,7 @@
 
   :global(ul.seances > li > a) {
     display: block;
-    width: 8em;
+    width: 9em;
     border: solid 1px #000;
     padding: 4px;
     color: #000;
@@ -129,15 +160,16 @@
 </style>
 
 <div class="container">
-  <CycleProg
-    datasrc="https://gist.githubusercontent.com/nltesown/5254b4a3530da9a4d5b06168b99b1525/raw/9b6af7e925ea1700a27030ba1138800c39ed985a/rohmer_RENDER.json" />
 
-  <!--
+  <select bind:value={selected} on:change={fetchData}>
+    {#each dataUrls as dataUrl}
+      <option value={dataUrl[1]}>{dataUrl[0]}</option>
+    {/each}
+  </select>
 
-  <CycleProg
-    datasrc="https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL449_RENDER_DEF%20Vittorio%20De%20Sica.json" />
+  <!-- <pre>
+    <code>{JSON.stringify(cycleData, null, 2)}</code>
+  </pre> -->
 
-  <CycleProg
-    datasrc="https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL444_RENDER_DEF%20Jean-Luc%20Godard.json" />
--->
+  <CycleProg header={cycleData.header} data={cycleData.data} />
 </div>
