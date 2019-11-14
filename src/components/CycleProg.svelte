@@ -1,16 +1,11 @@
 <script>
   import { onMount } from "svelte";
-  import format from "../lib/format";
-  import dayjs from "dayjs";
-  import SousCycleFilms from "./SousCycleFilms.svelte";
-  import SousCycleEvenements from "./SousCycleEvenements.svelte";
-  import "../lib/dayjs_custom_locale_fr.js";
-
-  // import { filmsImg } from "../store.js";
-
   import _ from "lodash";
-
+  import dayjs from "dayjs";
   dayjs.locale("fr");
+  import "../lib/dayjs_custom_locale_fr.js";
+  import format from "../lib/format";
+  import { filmsImg } from "../store.js";
 
   export let datasrc;
 
@@ -22,7 +17,6 @@
     const raw = await res.json();
     header = raw.header;
     data = raw.data;
-    console.log(data);
   });
 </script>
 
@@ -31,7 +25,6 @@
 </style>
 
 <div>
-
   <h1>{header.titreCycle}</h1>
   {#each data as sousCycle, i}
     {#if sousCycle.tri === 1}
@@ -42,8 +35,7 @@
             <div>
               <div
                 class="evenement-image"
-                style="background-image:url(img/films/{film.idFilm}-1.jpg)" />
-
+                style="background-image:url(https://www.cinematheque.fr/cache/media/{$filmsImg[film.idFilm]})" />
               <ul class="items-evenement">
                 <li>
 
@@ -55,7 +47,6 @@
                   </div>
                 </li>
               </ul>
-
               <ul class="seances">
                 {#each film.seance as seance}
                   <li>
@@ -66,7 +57,6 @@
                   </li>
                 {/each}
               </ul>
-
             </div>
           {/each}
         </div>
@@ -79,7 +69,7 @@
             <div>
               <div
                 class="evenement-image"
-                style="background-image:url(img/films/{evenement.films[evenement.films.length - 1].idFilm}-1.jpg)" />
+                style="background-image:url(https://www.cinematheque.fr/cache/media/{$filmsImg[evenement.films[evenement.films.length - 1].idFilm]})" />
               <div class="titre-evenement">
                 {evenement.titreEvenement || ''}
               </div>
@@ -111,15 +101,4 @@
       </section>
     {/if}
   {:else}Wait!{/each}
-
-  <!--
-  <h1>{header.titreCycle}</h1>
-  {#each data as sousCycle, i}
-    {#if sousCycle.tri === 1}
-      <SousCycleFilms data={sousCycle} />
-    {:else if sousCycle.tri === 2 || sousCycle.tri === 3 || sousCycle.tri === 4}
-      <SousCycleEvenements data={sousCycle} />
-    {/if}
-  {:else}Wait!{/each}
--->
 </div>

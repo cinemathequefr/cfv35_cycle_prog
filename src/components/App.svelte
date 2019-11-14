@@ -1,5 +1,5 @@
 <script>
-  // import { onMount } from "svelte";
+  import { onMount } from "svelte";
   import CycleProg from "./CycleProg.svelte";
   import { filmsImg } from "../store.js";
 
@@ -129,7 +129,6 @@
 </style>
 
 <div class="container">
-
   <CycleProg
     datasrc="https://gist.githubusercontent.com/nltesown/5254b4a3530da9a4d5b06168b99b1525/raw/9b6af7e925ea1700a27030ba1138800c39ed985a/rohmer_RENDER.json" />
 
