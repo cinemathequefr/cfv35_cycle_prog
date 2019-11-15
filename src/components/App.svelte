@@ -14,16 +14,32 @@
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL449_RENDER_DEF%20Vittorio%20De%20Sica.json"
     ],
     [
+      "Léonide Moguy",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL461_RENDER_DEF%20L%C3%A9onide%20Moguy.json"
+    ],
+    [
       "Alfred Hitchcock",
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL442_RENDER_DEF%20Alfred%20Hitchcock.json"
+    ],
+    [
+      "Anne-Marie Miéville",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL470_RENDER_DEF%20Anne-Marie%20Mi%C3%A9ville.json"
     ],
     [
       "Jean-Luc Godard",
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL444_RENDER_DEF%20Jean-Luc%20Godard.json"
     ],
     [
+      "Elia Suleiman",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL453_RENDER_DEF%20Elia%20Suleiman.json"
+    ],
+    [
       "James Ivory / Ismail Merchant",
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL450_RENDER_DEF%20Merchant-Ivory.json"
+    ],
+    [
+      "Jia Zhangke",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL464_RENDER_DEF%20Jia%20Zhangke.json"
     ],
     [
       "Musidora",
@@ -32,6 +48,34 @@
     [
       "Philippe Garrel",
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG61%20Septembre-novembre%202019/PROG61_CYCL438_RENDER_DEF%20Philippe%20Garrel.json"
+    ],
+    [
+      "Kira Mouratova",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG61%20Septembre-novembre%202019/PROG61_CYCL439_RENDER_DEF%20Kira%20Mouratova.json"
+    ],
+    [
+      "Mauro Bolognini",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG61%20Septembre-novembre%202019/PROG61_CYCL395_RENDER_DEF%20Mauro%20Bolognini.json"
+    ],
+    [
+      "Arnaud Desplechin",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG61%20Septembre-novembre%202019/PROG61_CYCL365_RENDER_DEF%20Arnaud%20Desplechin.json"
+    ],
+    [
+      "Guy Debord",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG61%20Septembre-novembre%202019/PROG61_CYCL351_RENDER_DEF%20Guy%20Debord.json"
+    ],
+    [
+      "James Gray",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG61%20Septembre-novembre%202019/PROG61_CYCL341_RENDER_DEF%20James%20Gray.json"
+    ],
+    [
+      "Sterling Hayden",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG61%20Septembre-novembre%202019/PROG61_CYCL337_RENDER_DEF%20Sterling%20Hayden.json"
+    ],
+    [
+      "Nicholas Ray",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG61%20Septembre-novembre%202019/PROG61_CYCL229_RENDER_DEF%20Nicholas%20Ray.json"
     ],
     [
       "John Cassavetes",
