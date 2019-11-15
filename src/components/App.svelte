@@ -47,6 +47,7 @@
   :global(body) {
     background-color: #fff;
     font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
   }
 
   :global(a) {
@@ -98,29 +99,39 @@
     border-left: solid 3px #ccc;
   }
 
+  :global(.film-infos) {
+    font-size: 0.875rem;
+  }
+
   :global(ul.seances) {
     margin-top: 8px;
   }
 
   :global(ul.seances > li) {
-    padding-bottom: 3px;
+    display: inline-block;
+    padding: 0 0 2px 2px;
   }
 
   :global(ul.seances > li > a) {
-    display: block;
+    display: inline-block;
     width: 9em;
     border: solid 1px #000;
     padding: 4px;
     color: #000;
     text-align: center;
-    font-size: 0.938rem;
+    font-size: 0.875rem;
     font-weight: 400;
     text-decoration: none;
     transition: 100ms;
   }
 
+  :global(ul.seances > li > a:hover, ul.seances > li > a:hover) {
+    background-color: #b2ccff;
+  }
+
   :global(.waffle-container) {
     lost-center: 100% 0px flex; /* http://lostgrid.org/docs.html#lost-center */
+    padding-bottom: 12px;
   }
 
   :global(.waffle-container > div) {
@@ -138,23 +149,39 @@
     :global(.evenement-image) {
       display: none;
     }
+
+    :global(.sous-cycle-text-container) {
+      margin: 0 0 24px 0;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 640px) {
+    :global(.waffle-container > div) {
+      lost-waffle: 1/2;
+    }
+    :global(.evenement-image) {
+      display: block;
+    }
   }
 
   @media (min-width: 768px) {
     :global(.waffle-container > div) {
       lost-waffle: 1/3;
     }
-    :global(.evenement-image) {
-      display: block;
-    }
   }
-  @media (min-width: 1440px) {
+
+  @media (min-width: 1280px) {
     :global(.container) {
       width: 1100px;
     }
 
     :global(.waffle-container > div) {
       lost-waffle: 1/4;
+    }
+
+    :global(.sous-cycle-text-container) {
+      width: 66.67%;
     }
   }
 </style>

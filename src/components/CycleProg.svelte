@@ -26,11 +26,26 @@
 </style>
 
 <div>
-  <h1>{header.titreCycle}</h1>
+  <!-- <h1>{header.titreCycle}</h1> -->
   {#each data as sousCycle, i}
     {#if sousCycle.tri === 1}
       <section>
         <h2>{sousCycle.titreSousCycle}</h2>
+        <div class="sous-cycle-text-container">
+          <p>
+            In mauris nulla, sollicitudin vel consectetur ut, condimentum eu mi.
+            Aenean in placerat mi, non suscipit est. Quisque ultricies ultricies
+            accumsan. Integer imperdiet id urna vitae eleifend. Maecenas
+            ultricies nec elit ac tincidunt. Morbi lorem massa, pulvinar sit
+            amet mi sit amet, tincidunt molestie orci. Nulla congue iaculis
+            turpis, sed ultrices diam iaculis id. Aliquam eros neque, sodales
+            quis venenatis eu, sollicitudin non lectus. Nam sed ex placerat,
+            pretium diam sed, maximus odio. Mauris semper magna ligula, nec
+            aliquam metus efficitur at. Sed nec nibh et enim vestibulum
+            consectetur ut id felis. Praesent sodales suscipit dolor, a dapibus
+            metus condimentum sed. Integer sit amet volutpat.
+          </p>
+        </div>
         <div class="waffle-container">
           {#each sousCycle.items as film}
             <div>
@@ -65,6 +80,22 @@
     {:else if sousCycle.tri === 2 || sousCycle.tri === 3 || sousCycle.tri === 4}
       <section>
         <h2>{sousCycle.titreSousCycle}</h2>
+        <div class="sous-cycle-text-container">
+          <p>
+            In mauris nulla, sollicitudin vel consectetur ut, condimentum eu mi.
+            Aenean in placerat mi, non suscipit est. Quisque ultricies ultricies
+            accumsan. Integer imperdiet id urna vitae eleifend. Maecenas
+            ultricies nec elit ac tincidunt. Morbi lorem massa, pulvinar sit
+            amet mi sit amet, tincidunt molestie orci. Nulla congue iaculis
+            turpis, sed ultrices diam iaculis id. Aliquam eros neque, sodales
+            quis venenatis eu, sollicitudin non lectus. Nam sed ex placerat,
+            pretium diam sed, maximus odio. Mauris semper magna ligula, nec
+            aliquam metus efficitur at. Sed nec nibh et enim vestibulum
+            consectetur ut id felis. Praesent sodales suscipit dolor, a dapibus
+            metus condimentum sed. Integer sit amet volutpat.
+          </p>
+        </div>
+
         <div class="waffle-container">
           {#each sousCycle.items as evenement}
             <div>
