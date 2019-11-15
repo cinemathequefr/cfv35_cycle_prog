@@ -155,25 +155,28 @@
     /* outline: solid 1px red; */
   }
 
-  @media (min-width: 0px) {
-    :global(.container) {
-      width: 90%;
-    }
-    :global(.waffle-container > div) {
-      lost-waffle: 1/1;
-    }
-    :global(.evenement-image) {
-      display: none;
-    }
-
-    :global(.sous-cycle-text-container) {
-      margin: 0 0 24px 0;
-      width: 100%;
-    }
+  /* @media (min-width: 0px) { */
+  :global(.container) {
+    width: 90%;
   }
+  :global(.waffle-container > div) {
+    lost-waffle: 1/1;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  :global(.evenement-image) {
+    display: none;
+  }
+
+  :global(.sous-cycle-text-container) {
+    margin: 0 0 24px 0;
+    width: 100%;
+  }
+  /* } */
 
   @media (min-width: 640px) {
     :global(.waffle-container > div) {
+      padding-bottom: 18px;
       lost-waffle: 1/2;
     }
     :global(.evenement-image) {
