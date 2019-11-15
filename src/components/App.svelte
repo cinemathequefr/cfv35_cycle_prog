@@ -14,8 +14,24 @@
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL449_RENDER_DEF%20Vittorio%20De%20Sica.json"
     ],
     [
+      "Alfred Hitchcock",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL442_RENDER_DEF%20Alfred%20Hitchcock.json"
+    ],
+    [
       "Jean-Luc Godard",
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL444_RENDER_DEF%20Jean-Luc%20Godard.json"
+    ],
+    [
+      "James Ivory / Ismail Merchant",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL450_RENDER_DEF%20Merchant-Ivory.json"
+    ],
+    [
+      "Musidora",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL452_RENDER_DEF%20Musidora.json"
+    ],
+    [
+      "Philippe Garrel",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG61%20Septembre-novembre%202019/PROG61_CYCL438_RENDER_DEF%20Philippe%20Garrel.json"
     ],
     [
       "John Cassavetes",
