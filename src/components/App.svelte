@@ -84,6 +84,10 @@
     [
       "Eric Rohmer",
       "https://gist.githubusercontent.com/nltesown/5254b4a3530da9a4d5b06168b99b1525/raw/9b6af7e925ea1700a27030ba1138800c39ed985a/rohmer_RENDER.json"
+    ],
+    [
+      "Raoul Ruiz",
+      "https://gist.githubusercontent.com/nltesown/230d4ad3e3c7984d2f8a6b2e699578e6/raw/a18f9e6becdbf59401b9363512d93d634a0ce1e8/PROG27_CYCL128_RENDER%2520Raoul%2520Ruiz.json"
     ]
   ];
 
