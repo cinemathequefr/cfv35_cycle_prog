@@ -14,6 +14,10 @@
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL449_RENDER_DEF%20Vittorio%20De%20Sica.json"
     ],
     [
+      "Aujourd'hui le cinéma novembre 2019-février 2020 ",
+      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL140_RENDER_DEF%20Aujourd'hui%20le%20cin%C3%A9ma.json"
+    ],
+    [
       "Léonide Moguy",
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL461_RENDER_DEF%20L%C3%A9onide%20Moguy.json"
     ],
