@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import CycleProg from "./CycleProg.svelte";
+  import CycleIntro from "./CycleIntro.svelte";
   import { filmsImg } from "../store.js";
 
   let selected;
@@ -9,6 +10,10 @@
   filmsImg.fetch();
 
   const dataUrls = [
+    [
+      "Cinéma bis : Vampires britanniques",
+      "https://gist.githubusercontent.com/nltesown/ffa3e28d3e38ca4a3857abec13e516f7/raw/6c991c2064dd6153fce2636234c95e790c35cef0/bis-vampires-britanniques-.json"
+    ],
     [
       "Vittorio De Sica",
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL449_RENDER_DEF%20Vittorio%20De%20Sica.json"
@@ -86,7 +91,7 @@
       "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG60%20Juin-juillet%202019/PROG60_CYCL426_RENDER%20John%20Cassavetes.json"
     ],
     [
-      "Eric Rohmer",
+      "Éric Rohmer",
       "https://gist.githubusercontent.com/nltesown/5254b4a3530da9a4d5b06168b99b1525/raw/9b6af7e925ea1700a27030ba1138800c39ed985a/rohmer_RENDER.json"
     ],
     [
@@ -112,10 +117,18 @@
   @lost flexbox flex;
   @lost gutter 12px;
 
+  :global(html) {
+    font-size: 16px;
+  }
+
   :global(body) {
     background-color: #fff;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1rem;
+  }
+
+  :global(p) {
+    line-height: 1.5;
   }
 
   :global(a) {
@@ -259,15 +272,20 @@
 
 <div class="container">
 
-  <select bind:value={selected} on:change={fetchData}>
+  <!-- Sélecteur de cycle -->
+  <select
+    style="margin-bottom: 128px;"
+    bind:value={selected}
+    on:change={fetchData}>
     {#each dataUrls as dataUrl}
       <option value={dataUrl[1]}>{dataUrl[0]}</option>
     {/each}
   </select>
-
-  <!-- <pre>
+  <!--
+  <pre>
     <code>{JSON.stringify(cycleData, null, 2)}</code>
-  </pre> -->
-
+  </pre>
+-->
+  <CycleIntro header={cycleData.header} data={cycleData.data} />
   <CycleProg header={cycleData.header} data={cycleData.data} />
 </div>
