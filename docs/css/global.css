@@ -1,0 +1,359 @@
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans|IBM+Plex+Sans|Lato|Nunito+Sans|Quicksand:700|Roboto|Source+Sans+Pro&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Nunito+Sans|Quicksand:700&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro&display=swap");
+
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 100%;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+}
+
+/* Les sections sont les principaux segments de page. */
+section {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+/* Le conteneur principal de contenu est placé directement à l'intérieur d'un segment. */
+section > .container {
+  margin: 30px auto;
+  padding: 15px;
+  min-width: 330px;
+  max-width: 1100px;
+  box-sizing: content-box; /* Pour exclure le padding du calcul de la largeur. */
+  /* outline: solid 1px red; */
+}
+
+@media (min-width: 1280px) {
+}
+
+.nav {
+  background-color: #9cf;
+  margin: 0;
+}
+
+.nav > select {
+  margin: 4px !important;
+}
+
+a {
+  color: rgb(0, 100, 200);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rgb(0, 80, 160);
+}
+
+label {
+  display: block;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.4em;
+  margin: 0 0 0.5em 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+input:disabled {
+  color: #ccc;
+}
+
+input[type="range"] {
+  height: 0;
+}
+
+button {
+  background-color: #f4f4f4;
+  outline: none;
+}
+
+button:active {
+  background-color: #ddd;
+}
+
+button:focus {
+  border-color: #666;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Quicksand;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.evenement-image {
+  width: 100%;
+  background-color: #ccc;
+  padding-bottom: 56.25%;
+  margin-bottom: 8px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 8px;
+  background-color: #fff;
+  padding: 8px 8px 24px 8px;
+  /* box-shadow: 1px 1px 6px #ddd; */
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .card {
+    width: calc(50% - 8px);
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: calc(33.33% - 8px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .card {
+    width: calc(25% - 8px);
+  }
+}
+
+ul.items-evenement > li {
+  margin-left: 0px;
+  margin-bottom: 2px;
+  padding-left: 6px;
+  border-left: solid 3px #ccc;
+}
+
+.titre-evenement {
+  font-size: 1.25rem;
+  padding-bottom: 0.75rem;
+}
+
+.film-infos {
+  font-size: 0.875rem;
+}
+
+ul.seances {
+  margin-top: 8px;
+}
+
+ul.seances > li {
+  display: inline-block;
+  padding: 0 0 2px 2px;
+}
+
+ul.seances > li > a {
+  display: inline-block;
+  width: 9em;
+  border: solid 1px #000;
+  padding: 4px;
+  color: #000;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 100ms;
+}
+
+ul.seances > li > a:hover,
+ul.seances > li > a:hover {
+  background-color: #b2ccff;
+}
+
+/* 
+ul.seances > li > a:before {
+  padding-right: 2px;
+  content: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg enable-background='new 0 0 96 96' id='clock' version='1.1' viewBox='0 0 96 96' width='13px' height='13px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M48,4C23.7,4,4,23.7,4,48c0,24.301,19.7,44,44,44c24.301,0,44-19.699,44-44C92,23.7,72.301,4,48,4z M48,84 c-19.882,0-36-16.118-36-36s16.118-36,36-36s36,16.118,36,36S67.882,84,48,84z'/%3E%3Cpath d='M52,46.343V24c0-2.209-1.791-4-4-4s-4,1.791-4,4v24c0,0.009,0.003,0.018,0.003,0.027c0.001,0.253,0.026,0.506,0.076,0.755 c0.024,0.123,0.069,0.234,0.104,0.354c0.039,0.132,0.069,0.266,0.122,0.395c0.058,0.138,0.136,0.264,0.208,0.394 c0.054,0.1,0.097,0.2,0.16,0.295c0.147,0.221,0.314,0.428,0.501,0.613l11.311,11.312c1.562,1.562,4.097,1.562,5.658,0 c1.562-1.562,1.562-4.097,0-5.656L52,46.343z'/%3E%3C/svg%3E");
+} */
+
+/*
+
+<style type="text/postcss">
+  @import "src/colors.css";
+  @import "src/global.css";
+  @lost flexbox flex;
+  @lost gutter 12px;
+
+  :global(html) {
+    font-size: 16px;
+  }
+  :global(p) {
+    line-height: 1.5;
+  }
+
+  :global(a) {
+    color: var(--main-link);
+    text-decoration: none;
+  }
+
+  :global(a:hover, a:active) {
+    text-decoration: underline;
+  }
+
+  :global(ul, li) {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  :global(h1, h2, h3) {
+    font-family: Quicksand;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  :global(.container) {
+    margin: 36px auto;
+    padding: 15px;
+  }
+
+  :global(.titre-evenement) {
+    color: var(--col1);
+    font-size: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  :global(.evenement-image) {
+    width: 100%;
+    background-color: #ccc;
+    padding-bottom: 56.25%;
+    margin-bottom: 8px;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  :global(ul.items-evenement > li) {
+    margin-left: 0px;
+    margin-bottom: 2px;
+    padding-left: 6px;
+    border-left: solid 3px #ccc;
+  }
+
+  :global(.film-infos) {
+    font-size: 0.875rem;
+  }
+
+  :global(ul.seances) {
+    margin-top: 8px;
+  }
+
+  :global(ul.seances > li) {
+    display: inline-block;
+    padding: 0 0 2px 2px;
+  }
+
+  :global(ul.seances > li > a) {
+    display: inline-block;
+    width: 9em;
+    border: solid 1px #000;
+    padding: 4px;
+    color: #000;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: 100ms;
+  }
+
+  :global(ul.seances > li > a:hover, ul.seances > li > a:hover) {
+    background-color: #b2ccff;
+  }
+
+  :global(.waffle-container) {
+    lost-center: 100% 0px flex;
+    padding-bottom: 12px;
+  }
+
+  :global(.waffle-container > div) {
+    padding-bottom: 18px;
+    
+  }
+
+  :global(.container) {
+    width: 90%;
+  }
+  :global(.waffle-container > div) {
+    lost-waffle: 1/1;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  :global(.evenement-image) {
+    display: none;
+  }
+
+  :global(.sous-cycle-text-container) {
+    margin: 0 0 24px 0;
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    :global(.waffle-container > div) {
+      padding-bottom: 18px;
+      lost-waffle: 1/2;
+    }
+    :global(.evenement-image) {
+      display: block;
+    }
+  }
+
+  @media (min-width: 768px) {
+    :global(.waffle-container > div) {
+      lost-waffle: 1/3;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    :global(.container) {
+      width: 1100px;
+    }
+
+    :global(.waffle-container > div) {
+      lost-waffle: 1/4;
+    }
+
+    :global(.sous-cycle-text-container) {
+      width: 66.67%;
+    }
+  }
+*/

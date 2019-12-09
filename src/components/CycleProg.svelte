@@ -25,93 +25,95 @@
 
 </style>
 
-<div>
-  <!-- <h1>{header.titreCycle}</h1> -->
-  {#each data as sousCycle, i}
-    {#if sousCycle.tri === 1}
-      <section>
-        <h2>{sousCycle.titreSousCycle}</h2>
-        <div class="sous-cycle-text-container">
-          {#each sousCycle.textes || [] as texte}
-            <p>{texte.texte}</p>
-          {/each}
-        </div>
-        <div class="waffle-container">
-          {#each sousCycle.items as film}
-            <div>
-              <div
-                class="evenement-image"
-                style="background-image:url(https://www.cinematheque.fr/cache/media/{$filmsImg[film.idFilm]})" />
-              <ul class="items-evenement">
-                <li>
-
-                  <a href="https://www.cinematheque.fr/film/{film.idFilm}.html">
-                    {format.artTitre(film.art, film.titre, true)}
-                  </a>
-                  <div class="film-infos">
-                    {film.realisateurs}, {film.annee}
-                  </div>
-                </li>
-              </ul>
-              <ul class="seances">
-                {#each film.seance as seance}
+<section>
+  <div class="container">
+    {#each data as sousCycle, i}
+      {#if sousCycle.tri === 1}
+        <section>
+          <h2>{sousCycle.titreSousCycle}</h2>
+          <div class="sous-cycle-text-container">
+            {#each sousCycle.textes || [] as texte}
+              <p>{texte.texte}</p>
+            {/each}
+          </div>
+          <div class="cards-container">
+            {#each sousCycle.items as film}
+              <div class="card">
+                <div
+                  class="evenement-image"
+                  style="background-image:url(https://www.cinematheque.fr/cache/media/{$filmsImg[film.idFilm]})" />
+                <ul class="items-evenement">
                   <li>
-                    <a href="javascript: void 0;">
-                      {dayjs(seance.dateHeure).format(`dd D MMM HH[h]mm`)}
-                      {seance.idSalle[0]}
-                    </a>
-                  </li>
-                {/each}
-              </ul>
-            </div>
-          {/each}
-        </div>
-      </section>
-    {:else if sousCycle.tri === 2 || sousCycle.tri === 3 || sousCycle.tri === 4}
-      <section>
-        <h2>{sousCycle.titreSousCycle}</h2>
-        <div class="sous-cycle-text-container">
-          {#each sousCycle.textes || [] as texte}
-            <p>{texte.texte}</p>
-          {/each}
-        </div>
 
-        <div class="waffle-container">
-          {#each sousCycle.items as evenement}
-            <div>
-              <div
-                class="evenement-image"
-                style="background-image:url(https://www.cinematheque.fr/cache/media/{$filmsImg[evenement.films[evenement.films.length - 1].idFilm]})" />
-              <div class="titre-evenement">
-                {evenement.titreEvenement || ''}
-              </div>
-              <ul class="items-evenement">
-                {#each evenement.films as film}
-                  <li>
                     <a
                       href="https://www.cinematheque.fr/film/{film.idFilm}.html">
-                      {format.artTitre(film.art, film.titre)}
+                      {format.artTitre(film.art, film.titre, true)}
                     </a>
                     <div class="film-infos">
                       {film.realisateurs}, {film.annee}
                     </div>
                   </li>
-                {/each}
-              </ul>
-              <ul class="seances">
-                {#each evenement.seance as seance}
-                  <li>
-                    <a href="javascript: void 0;">
-                      {dayjs(seance.dateHeure).format(`dd D MMM HH[h]mm`)}
-                      {seance.idSalle[0]}
-                    </a>
-                  </li>
-                {/each}
-              </ul>
-            </div>
-          {/each}
-        </div>
-      </section>
-    {/if}
-  {:else}Wait!{/each}
-</div>
+                </ul>
+                <ul class="seances">
+                  {#each film.seance as seance}
+                    <li>
+                      <a href="javascript: void 0;">
+                        {dayjs(seance.dateHeure).format(`dd D MMM HH[h]mm`)}
+                        {seance.idSalle[0]}
+                      </a>
+                    </li>
+                  {/each}
+                </ul>
+              </div>
+            {/each}
+          </div>
+        </section>
+      {:else if sousCycle.tri === 2 || sousCycle.tri === 3 || sousCycle.tri === 4}
+        <section>
+          <h2>{sousCycle.titreSousCycle}</h2>
+          <div class="sous-cycle-text-container">
+            {#each sousCycle.textes || [] as texte}
+              <p>{texte.texte}</p>
+            {/each}
+          </div>
+
+          <div class="cards-container">
+            {#each sousCycle.items as evenement}
+              <div class="card">
+                <div
+                  class="evenement-image"
+                  style="background-image:url(https://www.cinematheque.fr/cache/media/{$filmsImg[evenement.films[evenement.films.length - 1].idFilm]})" />
+                <div class="titre-evenement">
+                  {evenement.titreEvenement || ''}
+                </div>
+                <ul class="items-evenement">
+                  {#each evenement.films as film}
+                    <li>
+                      <a
+                        href="https://www.cinematheque.fr/film/{film.idFilm}.html">
+                        {format.artTitre(film.art, film.titre)}
+                      </a>
+                      <div class="film-infos">
+                        {film.realisateurs}, {film.annee}
+                      </div>
+                    </li>
+                  {/each}
+                </ul>
+                <ul class="seances">
+                  {#each evenement.seance as seance}
+                    <li>
+                      <a href="javascript: void 0;">
+                        {dayjs(seance.dateHeure).format(`dd D MMM HH[h]mm`)}
+                        {seance.idSalle[0]}
+                      </a>
+                    </li>
+                  {/each}
+                </ul>
+              </div>
+            {/each}
+          </div>
+        </section>
+      {/if}
+    {:else}Wait!{/each}
+  </div>
+</section>
