@@ -6,7 +6,6 @@
 
   let selected;
   let cycleData = {};
-
   filmsImg.fetch();
 
   const dataUrls = [
@@ -99,7 +98,6 @@
       "https://gist.githubusercontent.com/nltesown/230d4ad3e3c7984d2f8a6b2e699578e6/raw/a18f9e6becdbf59401b9363512d93d634a0ce1e8/PROG27_CYCL128_RENDER%2520Raoul%2520Ruiz.json"
     ]
   ];
-
   onMount(async () => {
     await fetchData({ target: { value: dataUrls[0][1] } });
   });

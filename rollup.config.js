@@ -21,9 +21,6 @@ export default {
   plugins: [
     svelte({
       dev: !production,
-      css: css => {
-        css.write("docs/css/bundle.css");
-      },
       preprocess: {
         style: ({ content, attributes }) => {
           if (attributes.type !== "text/postcss") {
@@ -42,9 +39,12 @@ export default {
               map: result.map.toString()
             }));
         }
+      },
+      css: css => {
+        css.write("docs/css/bundle.css");
       }
+      // emitCss: true
     }),
-
     resolve({
       browser: true
     }),

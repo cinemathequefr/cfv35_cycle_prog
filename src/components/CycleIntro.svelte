@@ -43,25 +43,31 @@
     /* min-height: 300px; */
   }
 
-  h1 {
+  /* h1 {
     margin: 6px 0 12px 0;
-  }
+  } */
 
   a.surtitre {
     display: inline-block;
     background-color: #ccc;
     color: #000;
     padding: 4px 12px;
-    font-family: Quicksand;
+    margin-bottom: 12px;
+    font-family: Nunito Sans;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: -0.05rem;
   }
 
   .datesCycle {
-    font-family: Quicksand;
+    font-family: Nunito Sans;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.25rem;
+    letter-spacing: -0.05rem;
+    margin-top: 12px;
+    margin-bottom: 24px;
   }
 </style>
 

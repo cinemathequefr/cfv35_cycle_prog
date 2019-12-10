@@ -17907,7 +17907,7 @@ var app = (function () {
         return { set, update, subscribe };
     }
 
-    const URL =
+    const url =
       "https://gist.githubusercontent.com/nltesown/63dcacb1f08596707299220777ecc58c/raw/c88b226894defa36c8bde1a1be0850d769c5828d/films_img.json";
 
     const filmsImg = (() => {
@@ -17916,7 +17916,7 @@ var app = (function () {
       return {
         subscribe,
         async fetch() {
-          const res = await fetch(URL);
+          const res = await fetch(url);
           const json = await res.json();
           set(json);
         }
@@ -17976,32 +17976,20 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (118:4) {:else}
+    // (110:4) {:else}
     function create_else_block(ctx) {
-    	var t;
-
     	const block = {
-    		c: function create() {
-    			t = text("Wait!");
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach_dev(t);
-    			}
-    		}
+    		c: noop,
+    		m: noop,
+    		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block.name, type: "else", source: "(118:4) {:else}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block.name, type: "else", source: "(110:4) {:else}", ctx });
     	return block;
     }
 
-    // (72:82) 
+    // (64:82) 
     function create_if_block_1(ctx) {
-    	var section, h2, t0_value = ctx.sousCycle.titreSousCycle + "", t0, t1, div0, t2, div1, t3;
+    	var div2, h2, t0_value = ctx.sousCycle.titreSousCycle + "", t0, t1, div0, t2, div1, t3;
 
     	let each_value_7 = ctx.sousCycle.textes || [];
 
@@ -18021,7 +18009,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			section = element("section");
+    			div2 = element("div");
     			h2 = element("h2");
     			t0 = text(t0_value);
     			t1 = space();
@@ -18039,33 +18027,35 @@ var app = (function () {
     			}
 
     			t3 = space();
-    			add_location(h2, file, 73, 10, 2350);
+    			attr_dev(h2, "class", "svelte-1ezsqa1");
+    			add_location(h2, file, 65, 10, 2180);
     			attr_dev(div0, "class", "sous-cycle-text-container");
-    			add_location(div0, file, 74, 10, 2397);
+    			add_location(div0, file, 66, 10, 2227);
     			attr_dev(div1, "class", "cards-container");
-    			add_location(div1, file, 80, 10, 2578);
-    			add_location(section, file, 72, 8, 2329);
+    			add_location(div1, file, 72, 10, 2408);
+    			attr_dev(div2, "class", "sous-cycle");
+    			add_location(div2, file, 64, 8, 2144);
     		},
 
     		m: function mount(target, anchor) {
-    			insert_dev(target, section, anchor);
-    			append_dev(section, h2);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, h2);
     			append_dev(h2, t0);
-    			append_dev(section, t1);
-    			append_dev(section, div0);
+    			append_dev(div2, t1);
+    			append_dev(div2, div0);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].m(div0, null);
     			}
 
-    			append_dev(section, t2);
-    			append_dev(section, div1);
+    			append_dev(div2, t2);
+    			append_dev(div2, div1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div1, null);
     			}
 
-    			append_dev(section, t3);
+    			append_dev(div2, t3);
     		},
 
     		p: function update(changed, ctx) {
@@ -18120,7 +18110,7 @@ var app = (function () {
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach_dev(section);
+    				detach_dev(div2);
     			}
 
     			destroy_each(each_blocks_1, detaching);
@@ -18128,13 +18118,13 @@ var app = (function () {
     			destroy_each(each_blocks, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1.name, type: "if", source: "(72:82) ", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1.name, type: "if", source: "(64:82) ", ctx });
     	return block;
     }
 
-    // (32:6) {#if sousCycle.tri === 1}
+    // (24:6) {#if sousCycle.tri === 1}
     function create_if_block(ctx) {
-    	var section, h2, t0_value = ctx.sousCycle.titreSousCycle + "", t0, t1, div0, t2, div1, t3;
+    	var div2, h2, t0_value = ctx.sousCycle.titreSousCycle + "", t0, t1, div0, t2, div1, t3;
 
     	let each_value_3 = ctx.sousCycle.textes || [];
 
@@ -18154,7 +18144,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			section = element("section");
+    			div2 = element("div");
     			h2 = element("h2");
     			t0 = text(t0_value);
     			t1 = space();
@@ -18172,33 +18162,35 @@ var app = (function () {
     			}
 
     			t3 = space();
-    			add_location(h2, file, 33, 10, 790);
+    			attr_dev(h2, "class", "svelte-1ezsqa1");
+    			add_location(h2, file, 25, 10, 609);
     			attr_dev(div0, "class", "sous-cycle-text-container");
-    			add_location(div0, file, 34, 10, 837);
+    			add_location(div0, file, 26, 10, 656);
     			attr_dev(div1, "class", "cards-container");
-    			add_location(div1, file, 39, 10, 1016);
-    			add_location(section, file, 32, 8, 769);
+    			add_location(div1, file, 31, 10, 835);
+    			attr_dev(div2, "class", "sous-cycle");
+    			add_location(div2, file, 24, 8, 573);
     		},
 
     		m: function mount(target, anchor) {
-    			insert_dev(target, section, anchor);
-    			append_dev(section, h2);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, h2);
     			append_dev(h2, t0);
-    			append_dev(section, t1);
-    			append_dev(section, div0);
+    			append_dev(div2, t1);
+    			append_dev(div2, div0);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].m(div0, null);
     			}
 
-    			append_dev(section, t2);
-    			append_dev(section, div1);
+    			append_dev(div2, t2);
+    			append_dev(div2, div1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div1, null);
     			}
 
-    			append_dev(section, t3);
+    			append_dev(div2, t3);
     		},
 
     		p: function update(changed, ctx) {
@@ -18253,7 +18245,7 @@ var app = (function () {
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach_dev(section);
+    				detach_dev(div2);
     			}
 
     			destroy_each(each_blocks_1, detaching);
@@ -18261,11 +18253,11 @@ var app = (function () {
     			destroy_each(each_blocks, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block.name, type: "if", source: "(32:6) {#if sousCycle.tri === 1}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block.name, type: "if", source: "(24:6) {#if sousCycle.tri === 1}", ctx });
     	return block;
     }
 
-    // (76:12) {#each sousCycle.textes || [] as texte}
+    // (68:12) {#each sousCycle.textes || [] as texte}
     function create_each_block_7(ctx) {
     	var p, t_value = ctx.texte.texte + "", t;
 
@@ -18273,7 +18265,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			add_location(p, file, 76, 14, 2505);
+    			add_location(p, file, 68, 14, 2335);
     		},
 
     		m: function mount(target, anchor) {
@@ -18293,11 +18285,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_7.name, type: "each", source: "(76:12) {#each sousCycle.textes || [] as texte}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_7.name, type: "each", source: "(68:12) {#each sousCycle.textes || [] as texte}", ctx });
     	return block;
     }
 
-    // (91:18) {#each evenement.films as film}
+    // (83:18) {#each evenement.films as film}
     function create_each_block_6(ctx) {
     	var li, a, t0_value = format.artTitre(ctx.film.art, ctx.film.titre) + "", t0, a_href_value, t1, div, t2_value = ctx.film.realisateurs + "", t2, t3, t4_value = ctx.film.annee + "", t4, t5;
 
@@ -18313,10 +18305,10 @@ var app = (function () {
     			t4 = text(t4_value);
     			t5 = space();
     			attr_dev(a, "href", a_href_value = "https://www.cinematheque.fr/film/" + ctx.film.idFilm + ".html");
-    			add_location(a, file, 92, 22, 3182);
+    			add_location(a, file, 84, 22, 3012);
     			attr_dev(div, "class", "film-infos");
-    			add_location(div, file, 96, 22, 3386);
-    			add_location(li, file, 91, 20, 3154);
+    			add_location(div, file, 88, 22, 3216);
+    			add_location(li, file, 83, 20, 2984);
     		},
 
     		m: function mount(target, anchor) {
@@ -18355,11 +18347,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_6.name, type: "each", source: "(91:18) {#each evenement.films as film}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_6.name, type: "each", source: "(83:18) {#each evenement.films as film}", ctx });
     	return block;
     }
 
-    // (104:18) {#each evenement.seance as seance}
+    // (96:18) {#each evenement.seance as seance}
     function create_each_block_5(ctx) {
     	var li, a, t0_value = dayjs_min(ctx.seance.dateHeure).format(`dd D MMM HH[h]mm`) + "", t0, t1, t2_value = ctx.seance.idSalle[0] + "", t2, t3;
 
@@ -18372,8 +18364,8 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(a, "href", "javascript: void 0;");
-    			add_location(a, file, 105, 22, 3718);
-    			add_location(li, file, 104, 20, 3690);
+    			add_location(a, file, 97, 22, 3548);
+    			add_location(li, file, 96, 20, 3520);
     		},
 
     		m: function mount(target, anchor) {
@@ -18401,11 +18393,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_5.name, type: "each", source: "(104:18) {#each evenement.seance as seance}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_5.name, type: "each", source: "(96:18) {#each evenement.seance as seance}", ctx });
     	return block;
     }
 
-    // (82:12) {#each sousCycle.items as evenement}
+    // (74:12) {#each sousCycle.items as evenement}
     function create_each_block_4(ctx) {
     	var div2, div0, t0, div1, t1_value = ctx.evenement.titreEvenement || '' + "", t1, t2, ul0, t3, ul1, t4;
 
@@ -18449,15 +18441,15 @@ var app = (function () {
     			t4 = space();
     			attr_dev(div0, "class", "evenement-image");
     			set_style(div0, "background-image", "url(https://www.cinematheque.fr/cache/media/" + ctx.$filmsImg[ctx.evenement.films[ctx.evenement.films.length - 1].idFilm] + ")");
-    			add_location(div0, file, 83, 16, 2709);
+    			add_location(div0, file, 75, 16, 2539);
     			attr_dev(div1, "class", "titre-evenement");
-    			add_location(div1, file, 86, 16, 2930);
+    			add_location(div1, file, 78, 16, 2760);
     			attr_dev(ul0, "class", "items-evenement");
-    			add_location(ul0, file, 89, 16, 3053);
+    			add_location(ul0, file, 81, 16, 2883);
     			attr_dev(ul1, "class", "seances");
-    			add_location(ul1, file, 102, 16, 3594);
+    			add_location(ul1, file, 94, 16, 3424);
     			attr_dev(div2, "class", "card");
-    			add_location(div2, file, 82, 14, 2673);
+    			add_location(div2, file, 74, 14, 2503);
     		},
 
     		m: function mount(target, anchor) {
@@ -18547,11 +18539,11 @@ var app = (function () {
     			destroy_each(each_blocks, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_4.name, type: "each", source: "(82:12) {#each sousCycle.items as evenement}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_4.name, type: "each", source: "(74:12) {#each sousCycle.items as evenement}", ctx });
     	return block;
     }
 
-    // (36:12) {#each sousCycle.textes || [] as texte}
+    // (28:12) {#each sousCycle.textes || [] as texte}
     function create_each_block_3(ctx) {
     	var p, t_value = ctx.texte.texte + "", t;
 
@@ -18559,7 +18551,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			add_location(p, file, 36, 14, 945);
+    			add_location(p, file, 28, 14, 764);
     		},
 
     		m: function mount(target, anchor) {
@@ -18579,11 +18571,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_3.name, type: "each", source: "(36:12) {#each sousCycle.textes || [] as texte}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_3.name, type: "each", source: "(28:12) {#each sousCycle.textes || [] as texte}", ctx });
     	return block;
     }
 
-    // (59:18) {#each film.seance as seance}
+    // (51:18) {#each film.seance as seance}
     function create_each_block_2(ctx) {
     	var li, a, t0_value = dayjs_min(ctx.seance.dateHeure).format(`dd D MMM HH[h]mm`) + "", t0, t1, t2_value = ctx.seance.idSalle[0] + "", t2, t3;
 
@@ -18596,8 +18588,8 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(a, "href", "javascript: void 0;");
-    			add_location(a, file, 60, 22, 1896);
-    			add_location(li, file, 59, 20, 1868);
+    			add_location(a, file, 52, 22, 1715);
+    			add_location(li, file, 51, 20, 1687);
     		},
 
     		m: function mount(target, anchor) {
@@ -18625,11 +18617,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_2.name, type: "each", source: "(59:18) {#each film.seance as seance}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_2.name, type: "each", source: "(51:18) {#each film.seance as seance}", ctx });
     	return block;
     }
 
-    // (41:12) {#each sousCycle.items as film}
+    // (33:12) {#each sousCycle.items as film}
     function create_each_block_1(ctx) {
     	var div2, div0, t0, ul0, li, a, t1_value = format.artTitre(ctx.film.art, ctx.film.titre, true) + "", t1, a_href_value, t2, div1, t3_value = ctx.film.realisateurs + "", t3, t4, t5_value = ctx.film.annee + "", t5, t6, ul1, t7;
 
@@ -18665,18 +18657,18 @@ var app = (function () {
     			t7 = space();
     			attr_dev(div0, "class", "evenement-image");
     			set_style(div0, "background-image", "url(https://www.cinematheque.fr/cache/media/" + ctx.$filmsImg[ctx.film.idFilm] + ")");
-    			add_location(div0, file, 42, 16, 1142);
+    			add_location(div0, file, 34, 16, 961);
     			attr_dev(a, "href", a_href_value = "https://www.cinematheque.fr/film/" + ctx.film.idFilm + ".html");
-    			add_location(a, file, 48, 20, 1400);
+    			add_location(a, file, 40, 20, 1219);
     			attr_dev(div1, "class", "film-infos");
-    			add_location(div1, file, 52, 20, 1602);
-    			add_location(li, file, 46, 18, 1372);
+    			add_location(div1, file, 44, 20, 1421);
+    			add_location(li, file, 38, 18, 1191);
     			attr_dev(ul0, "class", "items-evenement");
-    			add_location(ul0, file, 45, 16, 1324);
+    			add_location(ul0, file, 37, 16, 1143);
     			attr_dev(ul1, "class", "seances");
-    			add_location(ul1, file, 57, 16, 1777);
+    			add_location(ul1, file, 49, 16, 1596);
     			attr_dev(div2, "class", "card");
-    			add_location(div2, file, 41, 14, 1106);
+    			add_location(div2, file, 33, 14, 925);
     		},
 
     		m: function mount(target, anchor) {
@@ -18754,11 +18746,11 @@ var app = (function () {
     			destroy_each(each_blocks, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_1.name, type: "each", source: "(41:12) {#each sousCycle.items as film}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_1.name, type: "each", source: "(33:12) {#each sousCycle.items as film}", ctx });
     	return block;
     }
 
-    // (31:4) {#each data as sousCycle, i}
+    // (23:4) {#each data as sousCycle, i}
     function create_each_block(ctx) {
     	var if_block_anchor;
 
@@ -18802,7 +18794,7 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(31:4) {#each data as sousCycle, i}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(23:4) {#each data as sousCycle, i}", ctx });
     	return block;
     }
 
@@ -18833,8 +18825,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
     			attr_dev(div, "class", "container");
-    			add_location(div, file, 29, 2, 669);
-    			add_location(section, file, 28, 0, 656);
+    			add_location(div, file, 21, 2, 473);
+    			add_location(section, file, 20, 0, 460);
     		},
 
     		l: function claim(nodes) {
@@ -18916,16 +18908,6 @@ var app = (function () {
 
       let { header = { titreCycle: "" }, data = [] } = $$props;
 
-      // let header = { titreCycle: "" };
-      // let data = [];
-
-      // onMount(async () => {
-      //   const res = await fetch(datasrc);
-      //   const raw = await res.json();
-      //   header = raw.header;
-      //   data = raw.data;
-      // });
-
     	const writable_props = ['header', 'data'];
     	Object.keys($$props).forEach(key => {
     		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<CycleProg> was created with unknown prop '${key}'`);
@@ -18977,7 +18959,7 @@ var app = (function () {
 
     const file$1 = "src\\components\\CycleIntro.svelte";
 
-    // (118:2) {#if header.titreSurcycle}
+    // (124:2) {#if header.titreSurcycle}
     function create_if_block$1(ctx) {
     	var a, t_value = ctx.header.titreSurcycle + "", t;
 
@@ -18985,9 +18967,9 @@ var app = (function () {
     		c: function create() {
     			a = element("a");
     			t = text(t_value);
-    			attr_dev(a, "class", "surtitre svelte-n7rqpa");
+    			attr_dev(a, "class", "surtitre svelte-z4irar");
     			attr_dev(a, "href", "javascript:void 0;");
-    			add_location(a, file$1, 118, 4, 2507);
+    			add_location(a, file$1, 124, 4, 2676);
     		},
 
     		m: function mount(target, anchor) {
@@ -19007,7 +18989,7 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$1.name, type: "if", source: "(118:2) {#if header.titreSurcycle}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$1.name, type: "if", source: "(124:2) {#if header.titreSurcycle}", ctx });
     	return block;
     }
 
@@ -19031,17 +19013,16 @@ var app = (function () {
     			div2 = element("div");
     			t5 = space();
     			div3 = element("div");
-    			add_location(div0, file$1, 116, 0, 2466);
-    			attr_dev(h1, "class", "svelte-n7rqpa");
-    			add_location(h1, file$1, 121, 0, 2598);
-    			attr_dev(div1, "class", "datesCycle svelte-n7rqpa");
-    			add_location(div1, file$1, 122, 0, 2628);
-    			attr_dev(div2, "class", "col1 svelte-n7rqpa");
-    			add_location(div2, file$1, 126, 2, 2802);
-    			attr_dev(div3, "class", "col2 svelte-n7rqpa");
-    			add_location(div3, file$1, 129, 2, 2872);
-    			attr_dev(section, "class", "svelte-n7rqpa");
-    			add_location(section, file$1, 125, 0, 2789);
+    			add_location(div0, file$1, 122, 0, 2635);
+    			add_location(h1, file$1, 127, 0, 2767);
+    			attr_dev(div1, "class", "datesCycle svelte-z4irar");
+    			add_location(div1, file$1, 128, 0, 2797);
+    			attr_dev(div2, "class", "col1 svelte-z4irar");
+    			add_location(div2, file$1, 132, 2, 2971);
+    			attr_dev(div3, "class", "col2 svelte-z4irar");
+    			add_location(div3, file$1, 135, 2, 3041);
+    			attr_dev(section, "class", "svelte-z4irar");
+    			add_location(section, file$1, 131, 0, 2958);
     		},
 
     		l: function claim(nodes) {
@@ -19199,7 +19180,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (119:4) {#each dataUrls as dataUrl}
+    // (117:4) {#each dataUrls as dataUrl}
     function create_each_block$1(ctx) {
     	var option, t_value = ctx.dataUrl[0] + "", t;
 
@@ -19209,7 +19190,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = ctx.dataUrl[1];
     			option.value = option.__value;
-    			add_location(option, file$2, 119, 6, 5476);
+    			add_location(option, file$2, 117, 6, 5472);
     		},
 
     		m: function mount(target, anchor) {
@@ -19225,7 +19206,7 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(119:4) {#each dataUrls as dataUrl}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(117:4) {#each dataUrls as dataUrl}", ctx });
     	return block;
     }
 
@@ -19273,12 +19254,12 @@ var app = (function () {
     			cycleprog.$$.fragment.c();
     			if (ctx.selected === void 0) add_render_callback(() => ctx.select_change_handler.call(select));
     			set_style(select, "margin-bottom", "128px");
-    			add_location(select, file$2, 114, 2, 5338);
+    			add_location(select, file$2, 112, 2, 5334);
     			attr_dev(div0, "class", "nav");
-    			add_location(div0, file$2, 113, 0, 5317);
+    			add_location(div0, file$2, 111, 0, 5313);
     			attr_dev(div1, "class", "container");
-    			add_location(div1, file$2, 129, 2, 5658);
-    			add_location(section, file$2, 128, 0, 5645);
+    			add_location(div1, file$2, 127, 2, 5654);
+    			add_location(section, file$2, 126, 0, 5641);
 
     			dispose = [
     				listen_dev(select, "change", ctx.select_change_handler),
@@ -19392,7 +19373,6 @@ var app = (function () {
 
       let selected;
       let cycleData = {};
-
       filmsImg.fetch();
 
       const dataUrls = [
@@ -19485,7 +19465,6 @@ var app = (function () {
           "https://gist.githubusercontent.com/nltesown/230d4ad3e3c7984d2f8a6b2e699578e6/raw/a18f9e6becdbf59401b9363512d93d634a0ce1e8/PROG27_CYCL128_RENDER%2520Raoul%2520Ruiz.json"
         ]
       ];
-
       onMount(async () => {
         await fetchData({ target: { value: dataUrls[0][1] } });
       });

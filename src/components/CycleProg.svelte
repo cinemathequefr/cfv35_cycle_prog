@@ -9,27 +9,19 @@
 
   export let header = { titreCycle: "" };
   export let data = [];
-
-  // let header = { titreCycle: "" };
-  // let data = [];
-
-  // onMount(async () => {
-  //   const res = await fetch(datasrc);
-  //   const raw = await res.json();
-  //   header = raw.header;
-  //   data = raw.data;
-  // });
 </script>
 
 <style type="text/postcss">
-
+  h2 {
+    margin-bottom: 1.25rem;
+  }
 </style>
 
 <section>
   <div class="container">
     {#each data as sousCycle, i}
       {#if sousCycle.tri === 1}
-        <section>
+        <div class="sous-cycle">
           <h2>{sousCycle.titreSousCycle}</h2>
           <div class="sous-cycle-text-container">
             {#each sousCycle.textes || [] as texte}
@@ -67,9 +59,9 @@
               </div>
             {/each}
           </div>
-        </section>
+        </div>
       {:else if sousCycle.tri === 2 || sousCycle.tri === 3 || sousCycle.tri === 4}
-        <section>
+        <div class="sous-cycle">
           <h2>{sousCycle.titreSousCycle}</h2>
           <div class="sous-cycle-text-container">
             {#each sousCycle.textes || [] as texte}
@@ -112,8 +104,8 @@
               </div>
             {/each}
           </div>
-        </section>
+        </div>
       {/if}
-    {:else}Wait!{/each}
+    {:else}{/each}
   </div>
 </section>
