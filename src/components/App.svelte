@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import CycleProg from "./CycleProg.svelte";
   import CycleIntro from "./CycleIntro.svelte";
+  import Logo from "./Logo.svelte";
   import { filmsImg } from "../store.js";
 
   let selected;
@@ -124,6 +125,9 @@
     <code>{JSON.stringify(cycleData, null, 2)}</code>
   </pre>
 -->
+
+<Logo />
+
 <section>
   <div class="container">
     <CycleIntro header={cycleData.header} data={cycleData.data} />

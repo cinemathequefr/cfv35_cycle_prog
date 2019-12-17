@@ -96,13 +96,29 @@ h1 {
   font-size: 3rem;
   letter-spacing: -0.05rem;
 }
-
+/*
 .nav {
-  /* background-color: #9cf; */
   margin: 0;
+  background-color: #333;
+  padding-bottom: 24px;
 }
 
 .nav > select {
+  margin: 4px !important;
+}
+*/
+
+.nav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  display: inline-block;
+  background-color: #333;
+}
+
+.nav > select {
+  font-size: 0.875rem;
   margin: 4px !important;
 }
 
@@ -114,7 +130,7 @@ section {
   margin: 0;
 }
 
-section:nth-child(2n + 1) {
+section:nth-child(2n) {
   background-color: #eef;
 }
 
@@ -127,6 +143,14 @@ section > .container {
   box-sizing: content-box; /* Pour exclure le padding du calcul de la largeur. */
   /* background-color: #fff; */
   /* outline: solid 1px red; */
+}
+
+.datesCycle {
+  font-family: Source Sans Pro;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 12px;
+  margin-bottom: 24px;
 }
 
 .cards-container {
@@ -153,6 +177,50 @@ section > .container {
   margin-bottom: 4px;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+.row {
+  /* position: relative;
+  width: 100%; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.row > .col1 {
+  width: 58.33%;
+}
+
+.row > .col2 {
+  width: 41.66%;
+  /* background-color: #9cf; */
+}
+
+.row > .col1 > img {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container > iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.cycle-texte {
+  margin: 48px 0 48px 0;
 }
 
 @media (min-width: 640px) {

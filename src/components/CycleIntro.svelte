@@ -29,7 +29,7 @@
 </script>
 
 <style type="text/postcss">
-  @lost flexbox flex;
+  /* @lost flexbox flex;
 
   section {
     lost-center: 100%;
@@ -40,8 +40,7 @@
   }
   .col2 {
     lost-column: 5/12;
-    /* min-height: 300px; */
-  }
+  } */
 
   /* h1 {
     margin: 6px 0 12px 0;
@@ -59,16 +58,6 @@
     font-size: 1rem;
     letter-spacing: -0.05rem;
   }
-
-  .datesCycle {
-    font-family: Nunito Sans;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1.25rem;
-    letter-spacing: -0.05rem;
-    margin-top: 12px;
-    margin-bottom: 24px;
-  }
 </style>
 
 <div>
@@ -78,11 +67,28 @@
 </div>
 <h1>{header.titreCycle}</h1>
 <div class="datesCycle">
-  {concatDates(dayjs(minMaxDates[0]).format(`D MMMM YYYY`), dayjs(minMaxDates[1]).format(`D MMMM YYYY`), ' ', 'Du ', ' au ')}
+  {concatDates(dayjs(minMaxDates[0]).format(`D MMMM YYYY`), dayjs(minMaxDates[1]).format(`D MMMM YYYY`), ' ', '', '-')}
 </div>
-<section>
+<div class="row">
   <div class="col1">
-    {@html stringOnly(header.texte)}
+
+    <div class="iframe-container">
+      <iframe
+        title="Jean-Luc Godard - Bande-annonce"
+        src="//player.vimeo.com/video/371593713"
+        frameborder="0"
+        allowfullscreen />
+    </div>
+
+    <!-- <img
+      src="img/cycles/{header.idCycleProg}-1.jpg"
+      alt="Godard"
+      width="100%" /> -->
+
+    <!-- {@html stringOnly(header.texte)} -->
+    <div class="cycle-texte">
+      {@html "<p>Il y a soixante ans, <em>À bout de souffle</em> sortait sur les écrans. Depuis, le nom de Godard est pour les cinéphiles du monde entier le mot de passe qui embrasse tout à la fois la liberté de la Nouvelle Vague et la modernité la plus intransigeante. En artiste majeur, Godard a ses périodes et ses ruptures&nbsp;: à l'éclat romanesque du <em>Mépris</em> et de <em>Pierrot le fou</em> succèdent les années politiques (le groupe Dziga-Vertov), puis les années vidéo, où le cinéma se fait rigoureux outil d'investigation. Il revient à la fiction à l'aube des années 80, plus libre que jamais (<em>Sauve qui peut (la vie)</em>, <em>Prénom Carmen</em>, <em>Nouvelle Vague</em>). Ses œuvres tardives sont des méditations nourries d'un profond sens de l'Histoire et du tragique. Godard, le dernier des romantiques.</p>"}
+    </div>
   </div>
   <div class="col2" />
-</section>
+</div>
