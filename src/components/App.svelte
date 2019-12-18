@@ -126,7 +126,7 @@
   </pre>
 -->
 
-<Logo />
+<Logo/>
 
 <section>
   <div class="container">
