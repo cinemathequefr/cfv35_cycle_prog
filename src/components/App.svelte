@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import CycleProg from "./CycleProg.svelte";
   import CycleIntro from "./CycleIntro.svelte";
+  import Eager from "./Eager.svelte";
   import Logo from "./Logo.svelte";
   import { filmsImg } from "../store.js";
 
@@ -109,8 +110,21 @@
   }
 </script>
 
+<style>
+.deco {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 50px;
+  background-color: #223;
+  /* background-image: url(https://www.cinematheque.fr/cache/media/01-films/bandeau-mieville-apres-la-reconciliation/s,1600-023671.jpg); */
+  position: 0 50%;
+}
+</style>
+
+
 <!-- Sélecteur de cycle -->
-<div class="nav">
+<div class="selector">
   <select
     style="margin-bottom: 128px;"
     bind:value={selected}
@@ -125,8 +139,16 @@
     <code>{JSON.stringify(cycleData, null, 2)}</code>
   </pre>
 -->
+<Eager>
+  <div class="menu">
+    <div class="container">Coco</div>
+  </div>
+</Eager>
 
-<Logo/>
+
+<div class="deco">
+<Logo />
+</div>
 
 <section>
   <div class="container">
