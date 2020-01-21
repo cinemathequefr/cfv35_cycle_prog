@@ -1,11 +1,12 @@
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <title>CFv35 Menu</title>
     <link
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
       rel="stylesheet"
     />
-    <title>CFv35 Menu</title>
+    <link href="css/fonts.css" rel="stylesheet" />
     <style>
       body {
         position: relative;
@@ -22,15 +23,15 @@
 
       .header {
         position: relative;
-        height: 210px;
+        color: #fff;
         background: #1e2345;
-        background: linear-gradient(90deg, #1e2345 0%, #38437b 100%);
+        /* background: linear-gradient(90deg, #1e2345 0%, #38437b 100%); */
+        background: linear-gradient(90deg, #161a33 0%, #414d8c 100%);
       }
 
       .header > .container {
         position: relative;
         height: 210px;
-        /* outline: solid 1px red; */
       }
 
       .header a {
@@ -40,33 +41,36 @@
 
       .logo {
         position: absolute;
-        width: 400px;
+        width: 450px;
         height: auto;
-        top: 65px;
+        top: 55px;
       }
 
       input[type="text"] {
         font-family: "Source Sans Pro";
         background-color: #eee;
-        border-radius: 5px;
+        border-radius: 2px;
         border: none;
         margin: 0;
-        padding: 10px;
+        padding: 12px;
         color: #111;
         font-weight: 300;
         font-size: 16px;
         min-width: 500px;
-
+        transition: 0.2s;
       }
-.search {
+      input[type="text"]:focus {
+        background-color: #fff;
+      }
+
+      .search {
         background-repeat: no-repeat;
         background-position: 50% 50%;
-        background-image: url("data:image/svg+xml;utf8,<svg width='48' height='48' viewBox='0 0 48 48'><path fill='#000' d='M29.54 23.89c0-1.56-0.56-2.89-1.66-3.99s-2.44-1.66-3.99-1.66 -2.89 0.55-3.99 1.66 -1.66 2.44-1.66 4 0.55 2.89 1.66 3.99c1.11 1.11 2.44 1.66 4 1.66s2.89-0.56 3.99-1.66C28.98 26.77 29.54 25.44 29.54 23.89zM36 34.39c0 0.44-0.16 0.82-0.48 1.14C35.2 35.84 34.82 36 34.39 36c-0.45 0-0.83-0.16-1.13-0.48l-4.33-4.31c-1.51 1.04-3.18 1.56-5.03 1.56 -1.2 0-2.35-0.23-3.45-0.7 -1.1-0.47-2.04-1.1-2.84-1.89 -0.79-0.79-1.43-1.74-1.89-2.84C15.23 26.24 15 25.09 15 23.89s0.23-2.35 0.7-3.45c0.47-1.1 1.1-2.04 1.89-2.84 0.8-0.79 1.74-1.43 2.84-1.89C21.53 15.23 22.68 15 23.89 15s2.35 0.23 3.45 0.7c1.1 0.47 2.05 1.1 2.84 1.89 0.8 0.8 1.43 1.74 1.89 2.84 0.47 1.1 0.7 2.25 0.7 3.45 0 1.85-0.52 3.53-1.56 5.04l4.33 4.33C35.84 33.56 36 33.94 36 34.39z'/></svg>");
+        /* background-image: url("data:image/svg+xml;utf8,<svg width='48' height='48' viewBox='0 0 48 48'><path fill='#000' d='M29.54 23.89c0-1.56-0.56-2.89-1.66-3.99s-2.44-1.66-3.99-1.66 -2.89 0.55-3.99 1.66 -1.66 2.44-1.66 4 0.55 2.89 1.66 3.99c1.11 1.11 2.44 1.66 4 1.66s2.89-0.56 3.99-1.66C28.98 26.77 29.54 25.44 29.54 23.89zM36 34.39c0 0.44-0.16 0.82-0.48 1.14C35.2 35.84 34.82 36 34.39 36c-0.45 0-0.83-0.16-1.13-0.48l-4.33-4.31c-1.51 1.04-3.18 1.56-5.03 1.56 -1.2 0-2.35-0.23-3.45-0.7 -1.1-0.47-2.04-1.1-2.84-1.89 -0.79-0.79-1.43-1.74-1.89-2.84C15.23 26.24 15 25.09 15 23.89s0.23-2.35 0.7-3.45c0.47-1.1 1.1-2.04 1.89-2.84 0.8-0.79 1.74-1.43 2.84-1.89C21.53 15.23 22.68 15 23.89 15s2.35 0.23 3.45 0.7c1.1 0.47 2.05 1.1 2.84 1.89 0.8 0.8 1.43 1.74 1.89 2.84 0.47 1.1 0.7 2.25 0.7 3.45 0 1.85-0.52 3.53-1.56 5.04l4.33 4.33C35.84 33.56 36 33.94 36 34.39z'/></svg>"); */
         position: absolute;
-        top: 75px;
+        top: 83px;
         right: 0;
       }
-
 
       ul.menu1 {
         white-space: nowrap;
@@ -87,10 +91,9 @@
         background-color: #7a5b42;
         margin: 0 0 0 -1px;
         padding: 8px 8px;
-        font-family: Quicksand;
+        font-family: Quicksandcf;
         font-weight: 700;
-        /* font-size: 1rem; */
-        font-size: 0.875rem;
+        font-size: 1rem;
         text-transform: uppercase;
         transition: 0.2s;
       }
@@ -100,16 +103,46 @@
         background-color: rgb(142, 111, 86);
       }
 
-      .item2 {
-        display: inline-block;
-        padding: 8px 8px;
+      ul.menu2 {
+        white-space: nowrap;
+        position: absolute;
+        top: 4px;
+        right: 0;
         margin: 0;
-        font-family: Quicksand;
-        color: rgba(255, 255, 255, 0.75);
-        font-weight: 700;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: -0.3;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      ul.menu2 > li {
+        display: inline-block;
+      }
+      ul.menu2 > li > a {
+        display: block;
+        margin: 0 4px;
+        padding: 0 0 0 0;
+        border-bottom: solid 2px transparent;
+        font-size: 0.938rem;
+        transition: 0.1s;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      ul.menu2 > li > a:hover,
+      ul.menu2 > li > a:active {
+        border-bottom-color: rgba(255, 255, 255, 0.5);
+      }
+
+      select.lang {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: transparent;
+        font-size: 0.875rem;
+        font-weight: 400;
+        border: none;
+        margin: 0 0 0 4px;
+        border-bottom: solid 3px #fff;
+        text-align: center;
+        color: #fff;
       }
 
       .vVzemXxY_0 {
@@ -281,6 +314,7 @@
             class="vVzemXxY_11"
           ></path>
         </svg>
+
         <ul class="menu1">
           <li><a href="javascript: void 0;">Cinéma</a></li>
           <li><a href="javascript: void 0;">Exposition</a></li>
@@ -291,6 +325,21 @@
           <li><a href="javascript: void 0;">Infos pratiques</a></li>
           <li><a href="javascript: void 0;">Calendrier</a></li>
         </ul>
+
+        <ul class="menu2">
+          <li><a href="javascript: void 0;">Nos collections</a></li>
+          <li><a href="javascript: void 0;">Groupes et collectivités</a></li>
+          <li><a href="javascript: void 0;">Actions en milieu scolaire</a></li>
+          <li><a href="javascript: void 0;">Presse</a></li>
+          <li><a href="javascript: void 0;">Événements privés</a></li>
+          <li>
+            <select class="lang">
+              <option value="fr" selected>Fr</option>
+              <option value="en">En</option>
+            </select>
+          </li>
+        </ul>
+
         <input class="search" type="text" placeholder="Chercher sur le site" />
       </div>
     </div>
