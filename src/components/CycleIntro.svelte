@@ -65,6 +65,7 @@
     <a class="surtitre" href="javascript:void 0;">{header.titreSurcycle}</a>
   {/if}
 </div>
+<div class="typeCycle">Rétrospective</div>
 <h1>{header.titreCycle}</h1>
 <div class="datesCycle">
   {concatDates(dayjs(minMaxDates[0]).format(`D MMMM YYYY`), dayjs(minMaxDates[1]).format(`D MMMM YYYY`), ' ', '', '-')}

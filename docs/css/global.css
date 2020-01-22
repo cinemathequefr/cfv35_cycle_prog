@@ -95,6 +95,16 @@ h1 {
   letter-spacing: -0.05rem;
 }
 
+.typeCycle {
+  margin: 0;
+  padding: 0;
+  font-family: Quicksandcf;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 1.75rem;
+}
+
 .selector {
   position: fixed;
   right: 0;
@@ -124,9 +134,9 @@ section {
   margin: 0;
 }
 
-section:nth-child(2n) {
+/* section:nth-child(2n) {
   background-color: #eef;
-}
+} */
 
 /* Le conteneur principal de contenu est placé directement à l'intérieur d'un segment. */
 
