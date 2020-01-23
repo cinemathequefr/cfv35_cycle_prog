@@ -5,7 +5,7 @@
   import CycleIntro from "./CycleIntro.svelte";
   // import Eager from "./Eager.svelte";
   // import Logo from "./Logo.svelte";
-  import { filmsImg } from "../store.js";
+  import { filmsImg, cycleIntroData } from "../store.js";
 
   let selected;
   let cycleData = {};
@@ -111,7 +111,6 @@
   }
 </script>
 
-
 <!-- Sélecteur de cycle -->
 <div class="selector">
   <select
@@ -137,7 +136,7 @@
  -->
 
 <Menu />
-<section style="background-color: #f66;">
+<section>
   <div class="container">
     <CycleIntro header={cycleData.header} data={cycleData.data} />
   </div>

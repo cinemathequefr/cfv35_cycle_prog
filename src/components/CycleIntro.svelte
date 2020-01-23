@@ -42,9 +42,10 @@
     lost-column: 5/12;
   } */
 
-  /* h1 {
-    margin: 6px 0 12px 0;
-  } */
+  .title-container {
+    margin: 24px 0 0 0;
+    outline: solid 1px red;
+  }
 
   a.surtitre {
     display: inline-block;
@@ -52,7 +53,7 @@
     color: #000;
     padding: 4px 12px;
     margin-bottom: 12px;
-    font-family: Nunito Sans;
+    font-family: Quicksand;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1rem;
@@ -60,6 +61,7 @@
   }
 </style>
 
+<!--
 <div>
   {#if header.titreSurcycle}
     <a class="surtitre" href="javascript:void 0;">{header.titreSurcycle}</a>
@@ -70,6 +72,8 @@
 <div class="datesCycle">
   {concatDates(dayjs(minMaxDates[0]).format(`D MMMM YYYY`), dayjs(minMaxDates[1]).format(`D MMMM YYYY`), ' ', '', '-')}
 </div>
+-->
+
 <div class="row">
   <div class="col1">
 
@@ -79,6 +83,18 @@
         src="//player.vimeo.com/video/371593713"
         frameborder="0"
         allowfullscreen />
+    </div>
+
+    <div class="title-container">
+      {#if header.titreSurcycle}
+        <a class="surtitre" href="javascript:void 0;">{header.titreSurcycle}</a>
+      {/if}
+      <h1>{header.titreCycle}</h1>
+      <div class="datesCycle">
+        Rétrospective
+        <br />
+        {concatDates(dayjs(minMaxDates[0]).format(`D MMMM YYYY`), dayjs(minMaxDates[1]).format(`D MMMM YYYY`), ' ', 'du ', ' au ')}
+      </div>
     </div>
 
     <!-- <img
