@@ -5,7 +5,7 @@
   import CycleIntro from "./CycleIntro.svelte";
   // import Eager from "./Eager.svelte";
   // import Logo from "./Logo.svelte";
-  import { filmsImg, cycleIntroData } from "../store.js";
+  import { filmsImg } from "../store.js";
 
   let selected;
   let cycleData = {};
@@ -14,7 +14,8 @@
   const dataUrls = [
     [
       "Jean-Luc Godard",
-      "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL444_RENDER_DEF%20Jean-Luc%20Godard.json"
+      // "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL444_RENDER_DEF%20Jean-Luc%20Godard.json"
+      "https://gist.githubusercontent.com/nltesown/8eb3ff41348c3543d63fc06a8d6a3e59/raw/4bfe1b3cf1ea95f8062528f3888c37f68e09aa01/jean-luc-godard.json"
     ],
     [
       "Cinéma bis : Vampires britanniques",

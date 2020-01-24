@@ -29,22 +29,8 @@
 </script>
 
 <style type="text/postcss">
-  /* @lost flexbox flex;
-
-  section {
-    lost-center: 100%;
-  }
-  .col1 {
-    lost-column: 7/12;
-    min-height: 300px;
-  }
-  .col2 {
-    lost-column: 5/12;
-  } */
-
   .title-container {
     margin: 24px 0 0 0;
-    outline: solid 1px red;
   }
 
   a.surtitre {
@@ -61,51 +47,37 @@
   }
 </style>
 
-<!--
-<div>
-  {#if header.titreSurcycle}
-    <a class="surtitre" href="javascript:void 0;">{header.titreSurcycle}</a>
-  {/if}
-</div>
-<div class="typeCycle">Rétrospective</div>
-<h1>{header.titreCycle}</h1>
-<div class="datesCycle">
-  {concatDates(dayjs(minMaxDates[0]).format(`D MMMM YYYY`), dayjs(minMaxDates[1]).format(`D MMMM YYYY`), ' ', '', '-')}
-</div>
--->
-
 <div class="row">
   <div class="col1">
-
-    <div class="iframe-container">
-      <iframe
-        title="Jean-Luc Godard - Bande-annonce"
-        src="//player.vimeo.com/video/371593713"
-        frameborder="0"
-        allowfullscreen />
-    </div>
-
+    {#if !!(header.img && header.img.type)}
+      {#if header.img.type === 'video'}
+        <div class="iframe-container">
+          <iframe
+            title="Jean-Luc Godard - Bande-annonce"
+            src={header.img.url}
+            frameborder="0"
+            allowfullscreen />
+        </div>
+      {/if}
+    {/if}
     <div class="title-container">
       {#if header.titreSurcycle}
         <a class="surtitre" href="javascript:void 0;">{header.titreSurcycle}</a>
       {/if}
       <h1>{header.titreCycle}</h1>
       <div class="datesCycle">
-        Rétrospective
-        <br />
+        {#if header.typeCycle}
+          {header.typeCycle}
+          <br />
+        {/if}
         {concatDates(dayjs(minMaxDates[0]).format(`D MMMM YYYY`), dayjs(minMaxDates[1]).format(`D MMMM YYYY`), ' ', 'du ', ' au ')}
       </div>
     </div>
-
-    <!-- <img
-      src="img/cycles/{header.idCycleProg}-1.jpg"
-      alt="Godard"
-      width="100%" /> -->
-
-    <!-- {@html stringOnly(header.texte)} -->
-    <div class="cycle-texte">
-      {@html "<p>Il y a soixante ans, <em>À bout de souffle</em> sortait sur les écrans. Depuis, le nom de Godard est pour les cinéphiles du monde entier le mot de passe qui embrasse tout à la fois la liberté de la Nouvelle Vague et la modernité la plus intransigeante. En artiste majeur, Godard a ses périodes et ses ruptures&nbsp;: à l'éclat romanesque du <em>Mépris</em> et de <em>Pierrot le fou</em> succèdent les années politiques (le groupe Dziga-Vertov), puis les années vidéo, où le cinéma se fait rigoureux outil d'investigation. Il revient à la fiction à l'aube des années 80, plus libre que jamais (<em>Sauve qui peut (la vie)</em>, <em>Prénom Carmen</em>, <em>Nouvelle Vague</em>). Ses œuvres tardives sont des méditations nourries d'un profond sens de l'Histoire et du tragique. Godard, le dernier des romantiques.</p>"}
-    </div>
+    {#if header.texte}
+      <div class="cycle-texte">
+        {@html header.texte}
+      </div>
+    {/if}
   </div>
   <div class="col2" />
 </div>
