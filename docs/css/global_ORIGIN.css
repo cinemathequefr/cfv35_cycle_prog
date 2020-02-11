@@ -58,7 +58,6 @@ textarea {
 select {
   font-family: inherit;
   font-size: inherit;
-  /* padding: 0.4em; */
   margin: 0 0 0.5em 0;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -133,12 +132,7 @@ section {
   margin: 0;
 }
 
-/* section:nth-child(2n) {
-  background-color: #eef;
-} */
-
 /* Le conteneur principal de contenu est placé directement à l'intérieur d'un segment. */
-
 .menu > .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -192,8 +186,6 @@ section > .container {
 }
 
 .row {
-  /* position: relative;
-  width: 100%; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -203,12 +195,10 @@ section > .container {
 
 .row > .col1 {
   width: 66.67%;
-  /* width: 58.33%; */
 }
 
 .row > .col2 {
   width: 33.33%;
-  /* width: 41.66%; */
 }
 
 .row > .col1 > img {
@@ -260,7 +250,6 @@ section > .container {
 ul.items-evenement > li {
   margin-left: 0px;
   margin-bottom: 2px;
-
   padding-left: 6px;
   border-left: solid 3px #ccc;
 }

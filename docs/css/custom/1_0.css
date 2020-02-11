@@ -14,15 +14,12 @@ a {
 
 .card {
   width: 25%;
-  /* width: calc(25% - 8px); */
   margin-bottom: 8px;
-  /* background-color: #fff; */
   padding: 8px 8px 36px 8px;
   box-sizing: border-box;
 }
 
 .evenement-image {
-  /* display: none; */
   width: 100%;
   background-color: #ccc;
   padding-bottom: 56.25%;
@@ -41,6 +38,15 @@ ul.items-evenement > li {
 .titre-evenement {
   font-size: 1.125rem;
   padding-bottom: 6px;
+}
+
+a.titre {
+  display: inline-block;
+  font-size: 1rem;
+}
+a.titre:hover,
+a.titre:active {
+  text-decoration: underline;
 }
 
 .film-infos {

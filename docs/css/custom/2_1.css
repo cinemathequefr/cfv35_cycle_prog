@@ -29,24 +29,23 @@ ul.items-evenement > li {
 }
 
 .titre-evenement {
-  font-size: 1.125rem;
+  font-size: 13px;
+  font-family: Quicksandcf;
+  font-weight: 400;
+  text-transform: uppercase;
   padding-bottom: 6px;
 }
 
 .film-infos {
+  font-weight: 300;
   font-size: 0.875rem;
+  padding: 1px 0 10px 0;
+  color: #666;
 }
 
 .titre {
-  font-family: Quicksandcf;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 15px;
-}
-
-.film-infos {
-  padding: 1px 0 10px 0;
-  color: #666;
+  font-family: "Source Serif Pro";
+  font-weight: 600;
 }
 
 ul.seances {
@@ -79,15 +78,6 @@ h2 {
   margin-bottom: 7px;
 }
 
-.titre-evenement {
-  font-size: 13px;
-  font-family: Quicksand;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-/* 2e session */
-.titre {
-  font-weight: 400;
-  font-size: 15px;
+.subcard {
+  background-color: #ccfff7;
 }

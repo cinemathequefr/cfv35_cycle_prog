@@ -9,8 +9,10 @@
 
   let selected;
   let cycleData = {};
-  let customCss = "2_0";
+  let customCss = "2_1";
   filmsImg.fetch();
+
+  $: customCss;
 
   const dataUrls = [
     [
@@ -152,6 +154,7 @@
   <select style="margin-bottom: 128px;" bind:value={customCss}>
     <option value="1_0">1.0</option>
     <option value="2_0">2.0</option>
+    <option value="2_1">2.1</option>
   </select>
 
 </div>
