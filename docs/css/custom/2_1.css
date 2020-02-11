@@ -39,17 +39,22 @@ ul.items-evenement > li {
 .film-infos {
   font-weight: 300;
   font-size: 0.875rem;
-  padding: 1px 0 10px 0;
+  padding: 1px 0 4px 0;
+  /* padding: 1px 0 10px 0; */
   color: #666;
 }
 
 .titre {
-  font-family: "Source Serif Pro";
+  font-size: 15px;
   font-weight: 600;
+  /* font-family: "Source Serif Pro"; */
+  /* font-size: 16px;
+  color: #039; */
 }
 
 ul.seances {
-  margin-top: -4px;
+  margin-top: 4px;
+  /* margin-top: -4px; */
 }
 
 ul.seances > li {
@@ -79,5 +84,18 @@ h2 {
 }
 
 .subcard {
-  background-color: #ccfff7;
+  /* background-color: #ccfff7; */
+  /* border: solid 1px #8ae5d8; */
+}
+
+/*
+.titre-evenement,
+.items-evenement,
+.seances {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+*/
+.seances {
+  padding-bottom: 8px;
 }
