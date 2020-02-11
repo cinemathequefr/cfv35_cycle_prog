@@ -45,7 +45,8 @@ function beforeAfterStr(before, after, str) {
  * Cette fonction utilise uniquement une méthode textuelle et repose sur le fait que les deux dates sont construites sur le même modèle.
  * Les éléments constituant les dates doivent aller du plus court au plus long (jour, mois, année).
  * Elle ne garantit aucunement la validité, en particulier que la seconde date est postérieure à la première.
- * Si les deux dates sont identiques, on renvoie la date seule. * @example
+ * Si les deux dates sont identiques, on renvoie la date seule.
+ * @example
  * ("1 jan 2016", "31 déc 2016", " ", "", "-") => "1 jan-31 déc 2016"
  * ("16 février 2019", "18 février 2019", " ", "Du", "au") => "Du 16 au 18 février 2019"
  * ("16 février 2019", "18 février 2019", " ", "Du", "au") => "Du 16 au 18 février 2019"
