@@ -1,5 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro|Nunito+Sans:400,600,700,800,900&display=swap"); */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700|Nunito+Sans:400,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Nunito+Sans:400,600,700,800,900&display=swap");
 @import url("./fonts.css");
 
 html {
@@ -26,7 +26,9 @@ p {
 }
 
 a {
-  color: rgb(0, 100, 200);
+  /* color: rgb(0, 100, 200);
+   */
+  color: #000;
   text-decoration: none;
 }
 
@@ -273,8 +275,8 @@ section > .container {
 ul.items-evenement > li {
   margin-left: 0px;
   margin-bottom: 2px;
-  padding-left: 6px;
-  border-left: solid 3px #ccc;
+  /* padding-left: 6px; */
+  /* border-left: solid 3px #ccc; */
 }
 
 .titre-evenement {
@@ -297,9 +299,11 @@ ul.seances > li {
 
 ul.seances > li > a {
   display: inline-block;
-  width: 9em;
-  border: solid 1px #000;
-  padding: 4px;
+  /* width: 9em; */
+  /* border: solid 1px #000; */
+  /* padding: 4px; */
+  font-size: 13px !important;
+  font-weight: 300 !important;
   color: #000;
   text-align: center;
   font-size: 0.875rem;
@@ -311,4 +315,58 @@ ul.seances > li > a {
 ul.seances > li > a:hover,
 ul.seances > li > a:hover {
   background-color: #b2ccff;
+}
+
+/* Ajouts css */
+
+.titre {
+  font-family: Quicksandcf;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.film-infos {
+  padding: 1px 0 10px 0;
+  /* background-color: #eee; */
+  color: #666;
+}
+
+ul.seances {
+  margin-top: -4px;
+}
+
+ul.items-evenement > li {
+  line-height: 17px;
+}
+
+/* ul.items-evenement > li:last-child {
+  margin-bottom: 0;
+} */
+
+ul.seances > li > a {
+  /* text-decoration: underline; */
+  border-bottom: solid 1px #000;
+  margin-right: 8px;
+  /* text-transform: uppercase; */
+}
+
+.card {
+  padding-left: 6px;
+  margin-left: 6px;
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+.evenement-image {
+  margin-bottom: 7px;
+}
+
+.titre-evenement {
+  font-size: 13px;
+  font-family: Quicksand;
+  font-weight: 600;
+  text-transform: uppercase;
 }

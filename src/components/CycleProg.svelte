@@ -36,8 +36,8 @@
                   style="background-image:url(https://www.cinematheque.fr/cache/media/{$filmsImg[film.idFilm]})" />
                 <ul class="items-evenement">
                   <li>
-
                     <a
+                      class="titre"
                       href="https://www.cinematheque.fr/film/{film.idFilm}.html">
                       {format.artTitre(film.art, film.titre, true)}
                     </a>
@@ -82,6 +82,7 @@
                   {#each evenement.films as film}
                     <li>
                       <a
+                        class="titre"
                         href="https://www.cinematheque.fr/film/{film.idFilm}.html">
                         {format.artTitre(film.art, film.titre)}
                       </a>
