@@ -64,7 +64,8 @@ ul.seances > li {
 
 ul.seances > li > a {
   display: inline-block;
-  width: 9em;
+  width: 8em;
+  /* width: 9em; */
   border: solid 1px #000;
   padding: 4px;
   color: #000;
