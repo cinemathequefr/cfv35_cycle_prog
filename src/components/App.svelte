@@ -171,10 +171,10 @@
 </Eager>
  -->
 
-<!-- <Menu />
+<Menu />
 <section>
   <div class="container">
     <CycleIntro header={cycleData.header} data={cycleData.data} />
   </div>
-</section> -->
+</section>
 <CycleProg header={cycleData.header} data={cycleData.data} />
