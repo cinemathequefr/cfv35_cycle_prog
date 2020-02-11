@@ -9,6 +9,7 @@
 
   let selected;
   let cycleData = {};
+  let customCss = "1_0";
   filmsImg.fetch();
 
   const dataUrls = [
@@ -112,6 +113,32 @@
   }
 </script>
 
+<style>
+  .selector {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: inline-block;
+    background-color: #223;
+  }
+
+  .selector > select {
+    font-size: 0.875rem !important;
+    margin: 4px !important;
+  }
+
+  .selector > select > option {
+    font-size: 0.875rem !important;
+  }
+</style>
+
+<svelte:head>
+  {#if customCss !== ''}
+    <link rel="stylesheet" href="css/custom/{customCss}.css" />
+  {/if}
+</svelte:head>
+
 <!-- Sélecteur de cycle -->
 <div class="selector">
   <select
@@ -122,6 +149,11 @@
       <option value={dataUrl[1]}>{dataUrl[0]}</option>
     {/each}
   </select>
+  <select style="margin-bottom: 128px;" bind:value={customCss}>
+    <option value="1_0">1.0</option>
+    <option value="2_0">2.0</option>
+  </select>
+
 </div>
 <!--
   <pre>
@@ -135,10 +167,11 @@
   </div>
 </Eager>
  -->
-<Menu />
+<!--<Menu />
 <section>
   <div class="container">
     <CycleIntro header={cycleData.header} data={cycleData.data} />
   </div>
 </section>
+-->
 <CycleProg header={cycleData.header} data={cycleData.data} />
