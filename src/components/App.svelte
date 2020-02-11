@@ -9,7 +9,7 @@
 
   let selected;
   let cycleData = {};
-  let customCss = "1_0";
+  let customCss = "2_0";
   filmsImg.fetch();
 
   const dataUrls = [
