@@ -4,7 +4,8 @@
   import dayjs from "dayjs";
   dayjs.locale("fr");
   import "../lib/dayjs_custom_locale_fr.js";
-  import format from "../lib/format";
+  import { beforeAfterStr as ba, artTitre, join } from "../lib/format";
+
   import { filmsImg } from "../store.js";
 
   export let header = { titreCycle: "" };
@@ -42,11 +43,21 @@
                       <a
                         class="titre"
                         href="https://www.cinematheque.fr/film/{film.idFilm}.html">
-                        {format.artTitre(film.art, film.titre, true)}
+                        {@html join('<br>', [
+                          artTitre(film.art, film.titre),
+                          film.sousTitre
+                        ])}
                       </a>
-                      <div class="film-infos">
-                        {film.realisateurs}, {film.annee}
-                      </div>
+
+                      <!-- <a
+                        class="titre"
+                        href="https://www.cinematheque.fr/film/{film.idFilm}.html">
+                        {artTitre(film.art, film.titre, true)}
+                      </a> -->
+                      {@html ba(`<div class="film-infos">`, `</div>`, join(
+                          ', ',
+                          [film.realisateurs, film.annee]
+                        ))}
                     </li>
                   </ul>
                   <ul class="seances">
@@ -92,11 +103,15 @@
                         <a
                           class="titre"
                           href="https://www.cinematheque.fr/film/{film.idFilm}.html">
-                          {format.artTitre(film.art, film.titre)}
+                          {@html join('<br>', [
+                            artTitre(film.art, film.titre),
+                            film.sousTitre
+                          ])}
                         </a>
-                        <div class="film-infos">
-                          {film.realisateurs}, {film.annee}
-                        </div>
+                        {@html ba(`<div class="film-infos">`, `</div>`, join(
+                            ', ',
+                            [film.realisateurs, film.annee]
+                          ))}
                       </li>
                     {/each}
                   </ul>

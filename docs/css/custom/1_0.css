@@ -1,7 +1,8 @@
 /* CSS Nicolas */
 
 a {
-  color: rgb(0, 100, 200);
+  /* color: rgb(0, 100, 200); */
+  color: #404880;
 }
 
 .cards-container {

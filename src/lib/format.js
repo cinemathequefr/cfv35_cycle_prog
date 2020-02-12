@@ -30,7 +30,8 @@ function artTitre(art, titre, reject = false) {
  * @return {string}
  */
 function beforeAfterStr(before, after, str) {
-  if (!str) return;
+  if (!str) return "";
+  // if (!str) return;
   let _before = before;
   let _after = after;
   if (typeof before !== "function") before = () => _before || "";
