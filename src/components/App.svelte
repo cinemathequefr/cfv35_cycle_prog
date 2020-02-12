@@ -3,13 +3,11 @@
   import Menu from "./Menu.svelte";
   import CycleProg from "./CycleProg.svelte";
   import CycleIntro from "./CycleIntro.svelte";
-  // import Eager from "./Eager.svelte";
-  // import Logo from "./Logo.svelte";
   import { filmsImg } from "../store.js";
 
   let selected;
   let cycleData = {};
-  let customCss = "2_1";
+  let customCss = "2_2";
   filmsImg.fetch();
 
   $: {
@@ -156,13 +154,16 @@
     <option value="1_0">1.0</option>
     <option value="2_0">2.0</option>
     <option value="2_1">2.1</option>
+    <option value="2_2">2.2</option>
   </select>
 
 </div>
-<Menu />
+<!--
+  <Menu />
 <section>
   <div class="container">
     <CycleIntro header={cycleData.header} data={cycleData.data} />
   </div>
 </section>
+-->
 <CycleProg header={cycleData.header} data={cycleData.data} />

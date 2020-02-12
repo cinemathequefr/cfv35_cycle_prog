@@ -1,0 +1,118 @@
+/* CSS Mélanie 2020-02-11 */
+
+body {
+  font-family: "Nunito Sans";
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.card {
+  width: 25%;
+  padding: 8px 12px 36px 12px;
+  box-sizing: border-box;
+}
+
+.evenement-image {
+  display: block;
+  width: 100%;
+  background-color: #ccc;
+  padding-bottom: 56.25%;
+  margin-bottom: 4px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+ul.items-evenement > li {
+  line-height: 17px;
+}
+
+.titre-evenement {
+  font-size: 13px;
+  /* font-family: Quicksandcf; */
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+}
+
+.film-infos {
+  font-weight: 300;
+  font-size: 0.875rem;
+  padding: 1px 0 4px 0;
+  /* padding: 1px 0 10px 0; */
+  color: #666;
+}
+
+a.titre {
+  font-size: 15px;
+  font-weight: 600;
+  /* font-family: "Source Serif Pro"; */
+  /* font-size: 16px;
+  color: #039; */
+}
+
+a.titre:hover,
+a.titre:active {
+  text-decoration: underline;
+}
+
+ul.seances {
+  margin-top: 6px;
+  /* margin-top: -4px; */
+}
+
+ul.seances > li {
+  display: block;
+  padding: 0 0 2px 2px;
+  margin-bottom: 2px;
+}
+
+ul.seances > li > a {
+  display: inline-block;
+  /* width: 10em; */
+  /* text-align: center; */
+  font-size: 13px;
+  font-weight: 300;
+  color: #000;
+  /* border-bottom: solid 1px #000; */
+  margin-right: 2px;
+  background-color: #eee;
+  padding: 4px;
+}
+
+ul.seances > li > a:hover,
+ul.seances > li > a:hover {
+  background-color: #b2ccff;
+  /* text-decoration: underline; */
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+.evenement-image {
+  margin-bottom: 7px;
+}
+
+.subcard {
+  /* background-color: #ccfff7; */
+  /* border: solid 1px #8ae5d8; */
+}
+
+/*
+.titre-evenement,
+.items-evenement,
+.seances {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+*/
+.seances {
+  padding-bottom: 8px;
+}
