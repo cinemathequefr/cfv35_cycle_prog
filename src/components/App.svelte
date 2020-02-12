@@ -129,10 +129,6 @@
     font-size: 0.875rem !important;
     margin: 4px !important;
   }
-
-  .selector > select > option {
-    font-size: 0.875rem !important;
-  }
 </style>
 
 <svelte:head>
@@ -146,15 +142,19 @@
     style="margin-bottom: 128px;"
     bind:value={selected}
     on:change={fetchData}>
-    {#each dataUrls as dataUrl}
-      <option value={dataUrl[1]}>{dataUrl[0]}</option>
-    {/each}
+    <optgroup>
+      {#each dataUrls as dataUrl}
+        <option value={dataUrl[1]}>{dataUrl[0]}</option>
+      {/each}
+    </optgroup>
   </select>
   <select style="margin-bottom: 128px;" bind:value={customCss}>
-    <option value="1_0">1.0</option>
-    <option value="2_0">2.0</option>
-    <option value="2_1">2.1</option>
-    <option value="2_2">2.2</option>
+    <optgroup>
+      <option value="1_0">1.0</option>
+      <option value="2_0">2.0</option>
+      <option value="2_1">2.1</option>
+      <option value="2_2">2.2</option>
+    </optgroup>
   </select>
 
 </div>

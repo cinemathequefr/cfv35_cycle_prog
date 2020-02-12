@@ -4,6 +4,12 @@ body {
   font-family: "Nunito Sans";
 }
 
+.sous-cycle-text-container {
+  margin-left: 10px;
+  padding-bottom: 12px;
+  width: 58.33%;
+}
+
 .cards-container {
   display: flex;
   flex-direction: row;
@@ -35,7 +41,7 @@ ul.items-evenement > li {
 .titre-evenement {
   font-size: 13px;
   /* font-family: Quicksandcf; */
-  font-family: "Nunito Sans";
+  /* font-family: "Nunito Sans"; */
   font-weight: 400;
   text-transform: uppercase;
   padding-bottom: 6px;
