@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,600i,700,700i&display=swap");
 
 @import url("./fonts.css");
 
@@ -27,7 +27,7 @@ p {
 }
 
 a {
-  color: #000;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -194,4 +194,8 @@ section > .container {
 
 .cards-container {
   /* background-color: #ffc; */
+}
+
+.sous-cycle h2 {
+  margin-bottom: 1.25rem;
 }

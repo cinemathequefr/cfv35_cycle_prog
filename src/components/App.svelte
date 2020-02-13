@@ -37,7 +37,6 @@
     ],
     [
       "Alfred Hitchcock",
-      // "https://raw.githubusercontent.com/cinemathequefr/app_notules3/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL442_RENDER_DEF%20Alfred%20Hitchcock.json"
       "https://raw.githubusercontent.com/cinemathequefr/Publications_cycles/master/data/PROG65%20D%C3%A9cembre%202019-f%C3%A9vrier%202020/PROG65_CYCL442%20Alfred%20Hitchcock/generated/PROG65_CYCL442_RENDER_DEF%20Alfred%20Hitchcock.json"
     ],
     [
@@ -142,28 +141,25 @@
     style="margin-bottom: 128px;"
     bind:value={selected}
     on:change={fetchData}>
-    <optgroup>
-      {#each dataUrls as dataUrl}
-        <option value={dataUrl[1]}>{dataUrl[0]}</option>
-      {/each}
-    </optgroup>
+    {#each dataUrls as dataUrl}
+      <option value={dataUrl[1]}>{dataUrl[0]}</option>
+    {/each}
   </select>
   <select style="margin-bottom: 128px;" bind:value={customCss}>
-    <optgroup>
-      <option value="1_0">1.0</option>
-      <option value="2_0">2.0</option>
-      <option value="2_1">2.1</option>
-      <option value="2_2">2.2</option>
-    </optgroup>
+    <option value="1_0">1.0</option>
+    <option value="2_0">2.0</option>
+    <option value="2_1">2.1</option>
+    <option value="2_2">2.2</option>
+    <option value="2_3">2.3</option>
   </select>
 
 </div>
-<!--
-  <Menu />
+
+<Menu />
 <section>
   <div class="container">
     <CycleIntro header={cycleData.header} data={cycleData.data} />
   </div>
 </section>
--->
-<CycleProg header={cycleData.header} data={cycleData.data} />
+<CycleProg data={cycleData.data} />
+<!-- <CycleProg header={cycleData.header} data={cycleData.data} /> -->
