@@ -7,7 +7,7 @@
 
   let selected;
   let cycleData = {};
-  let customCss = "2_2";
+  let customCss = "2_4";
   filmsImg.fetch();
 
   $: {
@@ -151,6 +151,7 @@
     <option value="2_1">2.1</option>
     <option value="2_2">2.2</option>
     <option value="2_3">2.3</option>
+    <option value="2_4">2.4</option>
   </select>
 
 </div>
