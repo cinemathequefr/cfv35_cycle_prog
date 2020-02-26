@@ -156,7 +156,7 @@
 
 </div>
 
-<Menu />
+<!-- <Menu /> -->
 <section>
   <div class="container">
     <CycleIntro header={cycleData.header} data={cycleData.data} />
