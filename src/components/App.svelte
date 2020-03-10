@@ -109,8 +109,7 @@
   });
 
   async function fetchData(e) {
-    const res = await fetch(e.target.value);
-    cycleData = await res.json();
+    cycleData = await (await fetch(e.target.value)).json();
   }
 </script>
 
